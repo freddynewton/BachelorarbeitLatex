@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: template_Article.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+The style file: plainnat.bst
+Reallocating 'name_of_file' (item size: 1) to 11 items.
+Database file #1: references.bib
+Warning--empty publisher in AIforGamesTactical
+You've used 3 entries,
+            2773 wiz_defined-function locations,
+            611 strings with 5240 characters,
+and the built_in function-call counts, 934 in all, are:
+= -- 75
+> -- 30
+< -- 3
++ -- 12
+- -- 9
+* -- 57
+:= -- 148
+add.period$ -- 9
+call.type$ -- 3
+change.case$ -- 12
+chr.to.int$ -- 3
+cite$ -- 7
+duplicate$ -- 50
+empty$ -- 97
+format.name$ -- 12
+if$ -- 191
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 2
+newline$ -- 23
+num.names$ -- 12
+pop$ -- 36
+preamble$ -- 1
+purify$ -- 9
+quote$ -- 0
+skip$ -- 38
+stack$ -- 0
+substring$ -- 6
+swap$ -- 6
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 28
+warning$ -- 1
+while$ -- 9
+width$ -- 0
+write$ -- 43
+(There was 1 warning)

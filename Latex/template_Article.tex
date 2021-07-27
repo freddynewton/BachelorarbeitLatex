@@ -131,7 +131,7 @@
 	% TODO Write about about what it is this thesis
 	
 	\section{Motivation}
-During his studies, Mr Akdogan always wondered how the game AI shares its knowledge. Because if the \ac{AI} always knows everything, it would not be beneficial for the player and you want to give the player a good experience. While looking for a topic for his bachelor thesis, he came across a \ac{GDC} video from \citep{knowledgeReprentation} that talks about the representation of information and also about influence maps for the \ac{AI}. This raised the question of how much influence shared knowledge has among \ac{AI} as opposed to agents not sharing their knowledge with each other.
+During his studies, Mr Akdogan always wondered how the game AI shares its knowledge. Because if the \ac{AI} always knows everything, it would not be beneficial for the player and you want to give the player a good experience. While looking for a topic for his bachelor thesis, he came across a \ac{GDC} video from \citep{knowledgeReprentation} that talks about the representation of information and also about influence maps for the \ac{AI}. This raised the question of how much influence \ac{SK} has among \ac{AI} as opposed to agents not sharing their knowledge with each other.
 	
 	\section{Scientific question}
 	How big is the difference between the \ac{AI} agents when they share their influence map or each agent uses its own influence map? 
@@ -147,7 +147,7 @@ During his studies, Mr Akdogan always wondered how the game AI shares its knowle
 	
 	An \ac{IM} is used to record the current balance of Military Influence at each position in a level. Many factors can affect military influence, such as the proximity of a unit, the proximity of a base, the length of time a unit has been last seen, the terrain, the current weather, the strength of a unit. Many factors have only a small influence. Based on how the abstract image is drawn across the map or level of influence, more marginal information can be communicated to the \ac{AI} and tactical decisions can be made. 
 	
-	\subsection{Simple Influence}
+	\subsection{Simple Influence} \label{ssec:num2}
 	The influence of a unit in an area consists of how much its influence is weighted. Assuming it is a Real Time Strategy game and there is a foot soldier unit and a tank. Normally, a tank has more lives, more damage and a longer range than a simple foot soldier. This means that a larger Influence value is taken and injected into the \ac{IM} at the unit's position. If you take the strength of a unit, it decreases with increasing distance. So the further away you are from the unit, the less influence it has. A linear drop-off model can be used for this. A doubling of the distance results in a halving impact:
 	
 	\begin{equation}
@@ -177,12 +177,12 @@ During his studies, Mr Akdogan always wondered how the game AI shares its knowle
 	Where $I_t$ is the threshold value for the influence. Thus, the influence of each unit is only applied to the places that are within the given radius. This limits the calculation time to $O(nr)$ for the time and to $O(m)$ for the memory. $r$ is the number of locations that are within the given radius.
 	
 	\subsection{Dealing with unknowns}
-	Here, only the influence of units that can be seen in their radius is calculated for the unit. Thus, an aspect called \ac{FOW} is built in. This is important for investigating whether the shared knowledge of units makes a difference. In this way, units also have a maximum distance they can see and can only build a personal \ac{IM} based on the friendly or enemy units they can see and incorporate this into their decisions. This can be seen as a problem, as the \ac{AI} cannot simply assert which unit can be in the \ac{FOW} as humans can. Furthermore, it becomes important here to see how much influence shared knowledge has among a team and thus the \ac{FOW} becomes smaller and the unit shares knowledge among itself instead of each unit interacting individually.
+	Here, only the influence of units that can be seen in their radius is calculated for the unit. Thus, an aspect called \ac{FOW} is built in. This is important for investigating whether the \ac{SK} of units makes a difference. In this way, units also have a maximum distance they can see and can only build a personal \ac{IM} based on the friendly or enemy units they can see and incorporate this into their decisions. This can lead to problems for the \ac{AI} decision making, because it does not have the same memory as humans have and cannot map the context. Therefore, it is important to give the \ac{AI} some kind of memory. This can be mapped well with IM so that the \ac{AI} can manage well in the \ac{FOW}. It will also be very interesting to see if it makes a significant difference between the Shared and Unshared Knowledge Teams.
 	
 	\subsection{Influence Map Setup}
 	All information in this section is quoted from the article \citep{gameDevInfluenceMap}. Otherwise they are cited as such.
 	
-	For the \ac{IM}, a 2-dimensional grid is stretched over the map and divided into a grid system. Then all areas that cannot be walked on, such as walls or similar, are excluded from the calculation or ignored. This promotes the unknown, because you cannot see through walls. After that, the cells that are the shortest distance to each agent are injected with their influence in the 2 dimensional grid. This means that these cells are always set to the influence value of the unit regardless of anything else. After setting the values of each agent in the IM, a blur algorithm is applied as explained in the chapter \ref{ssec:num1}. It is up to you which one to use. The important thing is to only apply this to cells that are accessible. This way the unknown is applied and the influence of an agent has to spread around obstacles and not just take the distance to them. The value from the blur algorithm is then multiplied by the decay to implement a decay of the influence on the range. 
+	For the \ac{IM}, a 2-dimensional grid is stretched over the map and divided into a grid system. Then, all areas that cannot be walked on, such as walls or similar, are excluded from the calculation and ignored. This enables the unknown and the FOW. Because with this, the influence does not propar through obstacles but around them. After that, the cells that have the shortest distance to each agent are injected with their influence in the 2 dimensional grid. This means that these cells are always set to the influence value of the unit regardless of anything else. After setting the values of each agent in the IM, a blur algorithm is applied as explained in the chapter \ref{ssec:num1}. The choice of which blur method is best suited for each game depends heavily on the game designer. For example, depending on whether there are many walls on the level or more open vials, it can be decided whether to use one of the distance-based blur algorithms described in Chapter \ref{ssec:num2} or a blur algorithm from Chapter \ref{ssec:num1}. The important thing is to only apply this to cells that are accessible. Thus, the influence must propargize around walls and no distorted image is transmitted. The value from the blur algorithm is then multiplied by the decay to implement a decay of the influence on the range. 
 	
 	\begin{equation}
 		I_{xy} = b_{xy} * D
@@ -192,13 +192,16 @@ During his studies, Mr Akdogan always wondered how the game AI shares its knowle
 	
 	
 	\begin{description}
-		\item[$\bullet$ Momentum] % TODO
+		\item[$\bullet$ Momentum] With momentum the influence is linearly interpolated from the cell. In this way the memory of the IM is suggested.
+		\begin{equation}
+			I_{xy} = I_{xy} TODO
+		\end{equation}
 		\item[$\bullet$ Decay] Decay is for the decay of the influence value within an \ac{IM} so a kind of fading memory is built up and the influence continues to decrease depending on how far it is from its point of origin.
 		\item[$\bullet$ Update Frequency] This parameter describes how often the influence is updated. 
 		\end {description}
 		
 		\section{Blur } \label{ssec:num1}
-		For the calculation of the influence in maps with small corridors and narrow spaces \cite{gameDevInfluenceMap} a blur algorithm can be used as well as flooding functions. In this work, a boxblur algorithm was applied. But it would work just as well with a Gaussian blur. This is open to the individual preferences of how the influence should spread.
+		For the calculation of the influence on maps with narrow corridors and small areas a blur algorithm is used \citep{gameDevInfluenceMap}. This suggests that the algorithm is not affected by obstacles. Thus the influence flows around the corners. In this work, a boxblur algorithm was applied. But it would work just as well with a Gaussian blur. This is open to the individual preferences of how the influence should spread. For this work, the boxblur algorithm was chosen because it provides a more uniform distribution in all directions of influence. 
 		
 		\begin{table}[H]
 			\centering
@@ -216,11 +219,11 @@ During his studies, Mr Akdogan always wondered how the game AI shares its knowle
 				\hline
 				
 			\end{tabular}
-			\caption{Boxblur influence example grid - Iteration 0}
+			\caption{Boxblur influence example grid - Iteration 0. The inflow of two units was injected into a completely new \ac{IM}. The cell with the value $1.000$ is from the own team and the cell with the value $-1.000$ from the opposing team. }
 			\label{tab:Boxblur grid Iteration 0}
 		\end{table}
 		
-		The Box Blur is a spatial domain linear filter. This takes a pixel (or in our case a cell) from the grid and takes itself and its surrounding pixels and calculates the average as the new value. A 3 by 3 box blur (radius 1) can also be described here as a matrix:
+		The Box Blur is a spatial domain linear filter. It takes a pixel (or in our case a cell) from the grid and takes itself and its surrounding pixels and calculates the average as the new value. A 3 by 3 box blur (radius 1) can also be described as a matrix:
 		
 		\begin{equation}
 			K = \frac{1}{9}\begin{bmatrix} 1 & 1 & 1\\ 1 & 1 & 1\\ 1 & 1 & 1 \end{bmatrix}
@@ -244,7 +247,7 @@ During his studies, Mr Akdogan always wondered how the game AI shares its knowle
 				\hline
 				
 			\end{tabular}
-			\caption{Boxblur influence example grid - Iteration 1}
+			\caption{Boxblur influence example grid - Iteration 1. After the first iteration, from top left to bottom right, the cell was placed the 3 by 3 matrix. So that the center of the matrix lies on the cell and then calculated the mean value.}
 			\label{tab:Boxblur grid Iteration 1}
 		\end{table}
 		
@@ -268,7 +271,7 @@ During his studies, Mr Akdogan always wondered how the game AI shares its knowle
 			\label{tab:Boxblur grid Iteration 2}
 		\end{table}
 		
-		Through this box blur, the influence is gradually expanded with 1,000 and -1,000 and then stagnates after a certain iteration. The Celle with 1.000 means that there is an allied unit that places its influence there and -1.000 means that there is an enemy unit.
+		Through this box blur, the influence is gradually expanded with $1.000$ and $-1.000$ and then stagnates after a certain iteration. The Celle with $1.000$ means that there is an allied unit that places its influence there and $-1.000$ means that there is an enemy unit.
 		
 		\section{Waypoints}
 		Waypoints are positions distributed around the game world. With waypoints, the \ac{AI} can use this for its pathfinder in order to progress in the game world. Tactical waypoints require more data describing these points in order to make a correct decision about which waypoint to use \citep{AIforGamesTactical}.
@@ -301,6 +304,7 @@ During his studies, Mr Akdogan always wondered how the game AI shares its knowle
 			\acro{FOW}{fog-of-war}
 			\acro{AI}{artificial intelligence}
 			\acro{GDC}{game developers conference}
+			\acro{SK}{shared knowledge}
 		\end{acronym}
 		
 		\listoffigures

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2020.12.16)  20 JUL 2021 15:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2020.12.16)  25 JUL 2021 20:37
 entering extended mode
 **./template_Article.tex
 (template_Article.tex
@@ -420,6 +420,8 @@ Package acronym Info: Label `acro:AI' newly defined as it shall be overridden
 although it is yet undefined on input line 134.
 Package acronym Info: Label `acro:GDC' newly defined as it shall be overridden
 although it is yet undefined on input line 134.
+Package acronym Info: Label `acro:SK' newly defined as it shall be overridden
+although it is yet undefined on input line 134.
 [2
 
 ]
@@ -435,38 +437,38 @@ Chapter 3.
 ]
 Package acronym Info: Label `acro:FOW' newly defined as it shall be overridden
 although it is yet undefined on input line 180.
- [5] [6] [7]
+ [5] [6] [7] [8]
 Chapter 4.
-[8
+[9
 
-] [9]
+] [10]
 Chapter 5.
-[10
-
-]
-Chapter 6.
 [11
 
 ]
-Chapter 7.
+Chapter 6.
 [12
 
 ]
-Chapter 8.
+Chapter 7.
 [13
+
+]
+Chapter 8.
+[14
 
 ] (template_Article.lof)
 \tf@lof=\write5
 \openout5 = `template_Article.lof'.
 
- [14
+ [15
 
 ] (template_Article.lot)
 \tf@lot=\write6
 \openout6 = `template_Article.lot'.
 
  (template_Article.bbl
-[15
+[16
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 15--19
@@ -484,20 +486,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--19
 \OT1/cmtt/m/n/10 net / tutorials / programming / artificial-[]intelligence /
  []
 
-) [16
+) [17
 
 ] (template_Article.aux)
 Package rerunfilecheck Info: File `template_Article.out' has not changed.
 (rerunfilecheck)             Checksum: 3F47D655D1157E6B30FB110919F7B1CB;1305.
  ) 
 Here is how much of TeX's memory you used:
- 7565 strings out of 479697
- 113521 string characters out of 2867132
- 434858 words of memory out of 3000000
- 24446 multiletter control sequences out of 15000+200000
+ 7576 strings out of 479697
+ 113632 string characters out of 2867132
+ 438338 words of memory out of 3000000
+ 24453 multiletter control sequences out of 15000+200000
  409308 words of font info for 49 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 66i,8n,72p,1047b,412s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 66i,8n,72p,1377b,412s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\fredd\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1000.pk><C:/Users/fredd/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmbx10.pfb><C:/Users/fredd/AppData/Local/Programs/MiKTeX/fonts/type1/publ
@@ -514,9 +516,9 @@ C:/Users/fredd/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr
 msfonts/cm/cmsy10.pfb><C:/Users/fredd/AppData/Local/Programs/MiKTeX/fonts/type1
 /public/amsfonts/cm/cmti10.pfb><C:/Users/fredd/AppData/Local/Programs/MiKTeX/fo
 nts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on template_Article.pdf (19 pages, 223531 bytes).
+Output written on template_Article.pdf (20 pages, 229878 bytes).
 PDF statistics:
- 345 PDF objects out of 1000 (max. 8388607)
- 66 named destinations out of 1000 (max. 500000)
+ 369 PDF objects out of 1000 (max. 8388607)
+ 70 named destinations out of 1000 (max. 500000)
  177 words of extra memory for PDF output out of 10000 (max. 10000000)
 

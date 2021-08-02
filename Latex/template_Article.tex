@@ -12,6 +12,8 @@
 \usepackage[strings]{underscore}
 \usepackage[printonlyused]{acronym}
 \bibliographystyle{plainnat}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
 
 
 
@@ -176,7 +178,7 @@ During his studies, Mr Akdogan always wondered how the game AI shares its knowle
 
 	Where $I_t$ is the threshold value for the influence. Thus, the influence of each unit is only applied to the places that are within the given radius. This limits the calculation time to $O(nr)$ for the time and to $O(m)$ for the memory. $r$ is the number of locations that are within the given radius.
 	
-	\subsection{Dealing with unknowns}
+	\subsection{Dealing with unknowns} \label{ssec:dwu}
 	Here, only the influence of units that can be seen in their radius is calculated for the unit. Thus, an aspect called \ac{FOW} is built in. This is important for investigating whether the \ac{SK} of units makes a difference. In this way, units also have a maximum distance they can see and can only build a personal \ac{IM} based on the friendly or enemy units they can see and incorporate this into their decisions. This can lead to problems for the \ac{AI} decision making, because it does not have the same memory as humans have and cannot map the context. Therefore, it is important to give the \ac{AI} some kind of memory. This can be mapped well with IM so that the \ac{AI} can manage well in the \ac{FOW}. It will also be very interesting to see if it makes a significant difference between the Shared and Unshared Knowledge Teams.
 	
 	\subsection{Influence Map Setup}
@@ -277,20 +279,55 @@ During his studies, Mr Akdogan always wondered how the game AI shares its knowle
 		Waypoints are positions distributed around the game world. With waypoints, the \ac{AI} can use this for its pathfinder in order to progress in the game world. Tactical waypoints require more data describing these points in order to make a correct decision about which waypoint to use \citep{AIforGamesTactical}.
 		
 		\chapter{Experimental setup}
-		The experiment is a match against two sides in the style of "conquest" as in games of Battlefield. In Conquest, there are a certain number of places that a side tries to capture. At the beginning, each place is still uncaptured. When a team has taken a point, it always gets points added to their points account at certain time intervals. The team that has reached a certain number of points first after a certain time has won. 
+		The expirement consists of a map on which two teams compete against each other. This will be similar to the game mode "Conquest" from Battlefield 1 \citep{battlefield1modes}. In Conquest, there are a certain number of places that a team tries to capture. At the beginning, each place is still uncaptured. When a team has taken a place, it always gets points added to their points account at certain time intervals. The team that has reached a certain number of points first after a certain time has won. 
 		One side will consist of a squad of five agents, the other side of five squads of one agent each. A squad always knows where its agents are and whether a unit sees a friendly or enemy agent and can thus build up an \ac{IM}.
-		Each time a team wins, this is saved in a file and the next match starts from the beginning. This allows you to run this several thousand times so that the result is not falsified.
+		When a team has won, information about the match is saved for later evaluation and the next match starts. This allows you to run this several thousand times so that the result is not falsified.
+		
+		\section{Game mode adjustments}
+		Since in the game mode Conquest of Battlefield \citep{battlefield1modes} the current state of the capturable locations is always queried with a certain tick rate, this can lead to inaccurate values. Therefore the time a place is in possession of a team is counted to avoid the sampling problem.
 		
 		\section{Assumption}
-		I think the side with the squad and its five agents has a slightly higher win rate than the side with the 5 squads with one agent each. This is because it has more information to decide, for example, which of the points to attack first or which point may have no enemy units. 
+		The side with the squad and its five agents has a slightly higher win rate than the side with the 5 squads with one agent each. This is because it has more information to decide, for example, which of the points to attack first or which point may have no enemy units. 
 		
 		\section{Rules of the game}
-		The goal of one side is to reach 100 points to win the game. This means that there will always be 3 points distributed on the map, each of which can be captured. A point is captured when an agent is in a certain area without any other enemy agents. Each point adds one point to the score every 5 seconds. Each agent has the option to shoot and kill an enemy agent. Each agent has 100 lives and can shoot a projectile with 10 damage every 3 seconds. If the projectile hits a wall or another enemy agent it is destroyed. If an agent has 0 life it is destroyed and after 10 seconds it is re-instantiated at a random location on the map but not in a capturable point and thus rejoins the game.
+		The goal of a match is to have captured capturable locations for the longest time. There are 3 capturable locations distributed for the agents. A location can be captured if there is no agent from the opposing team with an own agent at the location. In this case, the location's affiliation changes immediately. After the location is captured, the time is accumulated on the team's points account. The match ends after a total duration of 300 seconds. 
+		During the match, the agents shoot at the opposing team then. Each agent has 100 health points and each shot that hits takes away 50 health points. If an agent dies, it will be instantiated again after 5 seconds. On a random location on the map that does not count as a capturable point but more about that in chapter \ref{ssec:rf}. 
 		
 		\subsection{Playing field construction}
-		\subsection{Randomness factor}
+		Two different types of maps are used. An open map where an agent can more easily discover own team members or enemy units and a closed map with many corridors to not promote the unknown as explained in chapter \ref{ssec:dwu}. The unknown is the \ac{FOW} that the agent cannot see on the map. 
+		
+		\subsubsection{Open map structure}
+			\begin{figure}[h!]
+			\centering
+			\includegraphics[width=1\linewidth]{"Images/open map"}
+			\caption[Open map structure]{An open map with three capturable points marked with a cyan rectangle.}
+			\label{fig:open-map}
+			\end{figure}
+		
+		\clearpage
+		\subsubsection{Closed map Structure}
+		\begin{figure}[h!]
+			\centering
+			\includegraphics[width=1\linewidth]{Images/closemap}
+			\caption[Close map structure]{A closed map with three capturable points marked with a cyan rectangle. Here are many angles and small corridors distributed on the map and it was careful not to have too many open spaces so that the influence must propargieren more around the corners and that the agents are not very line of sight to own team members or opponents.}
+			\label{fig:close-map}
+		\end{figure}
+		
+		
+		
+		\subsection{Randomness factor} \label{ssec:rf}
 		
 		\chapter{Results}
+		\section{Open map}
+		\subsection{Shared vs Unshared}
+		\subsection{Unshared vs Shared}
+		\subsection{Shared vs Shared}
+		\subsection{Unshared vs Unshared}
+		\section{Closed map}
+		\subsection{Shared vs Unshared}
+		\subsection{Unshared vs Shared}
+		\subsection{Shared vs Shared}
+		\subsection{Unshared vs Unshared}
 		\chapter{Discussion}
 		
 		\chapter{Conclusion}

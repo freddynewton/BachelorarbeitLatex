@@ -7,6 +7,7 @@
 \usepackage{amsfonts}
 \usepackage{graphicx}
 \usepackage{hyperref}
+\usepackage[section]{placeins}
 \usepackage[authoryear,square]{natbib}
 \usepackage[svgnames]{xcolor}
 \usepackage[strings]{underscore}
@@ -141,7 +142,8 @@ During his studies, Mr Akdogan always wondered how the game AI shares its knowle
 	% TODO
 	
 	\chapter{Related work}
-	In \citep{gameDevInfluenceMap} article discussed how \ac{IM} works in general. As well as the important part of giving an agent or squad a memory of the current influence range on the map. 
+	In \cite{10.5555/2821138} article discussed how \ac{IM} works in general. As well as the important part of giving an agent or squad a memory of the current influence range on the map.\newline
+	The article \citep{gameDevInfluenceMap} discusses how \ac{IM} is implemented in the industry. Just like how an \ac{IM} behaves on maps with narrow aisles and few open areas.
 	
 	\chapter{Theoretical background}
 	\section{Influence Map}
@@ -196,8 +198,10 @@ During his studies, Mr Akdogan always wondered how the game AI shares its knowle
 	\begin{description}
 		\item[$\bullet$ Momentum] With momentum the influence is linearly interpolated from the cell. In this way the memory of the IM is suggested.
 		\begin{equation}
-			I_{xy} = I_{xy} TODO
+			I_{xy} = I_{xy} + ((I_{h} - I_{xy}) * m) 
 		\end{equation}
+		$I_{h}$ stands for the highest or lowest influence value that exists on the IM. If $I_{xy}$ is greater than or equal to $0$, the highest value is taken and if $I_{xy}$ is less than $0$, the lowest value is taken. $m$ is the value for the momentum. 
+		
 		\item[$\bullet$ Decay] Decay is for the decay of the influence value within an \ac{IM} so a kind of fading memory is built up and the influence continues to decrease depending on how far it is from its point of origin.
 		\item[$\bullet$ Update Frequency] This parameter describes how often the influence is updated. 
 		\end {description}
@@ -309,25 +313,97 @@ During his studies, Mr Akdogan always wondered how the game AI shares its knowle
 		\begin{figure}[h!]
 			\centering
 			\includegraphics[width=1\linewidth]{Images/closemap}
-			\caption[Close map structure]{A closed map with three capturable points marked with a cyan rectangle. Here are many angles and small corridors distributed on the map and it was careful not to have too many open spaces so that the influence must propargieren more around the corners and that the agents are not very line of sight to own team members or opponents.}
+			\caption[Close map structure]{A closed map with three capturable points marked with a cyan rectangle. Here are many angles and small corridors distributed on the map and it was careful not to have too many open spaces so that the influence must propagate more around the corners and that the agents are not very line of sight to own team members or opponents.}
 			\label{fig:close-map}
 		\end{figure}
 		
-		
-		
 		\subsection{Randomness factor} \label{ssec:rf}
+		So that not every match runs the same, a random factor had to be added. Therefore the instantiation was chosen where an agent is placed when he died or when the match started. An agent then gets a random ball selected that is not in a capturable location. The randomization is done by the Unity3D engine random range function \citep{technologiesUnityRandomRange}. If you always play a round with the same spawn locations you will always get a deterministic result and the agents will make the same decisions.
 		
+		\clearpage
 		\chapter{Results}
 		\section{Open map}
 		\subsection{Shared vs Unshared}
+		\begin{figure}[h!]
+			\centering
+			\includegraphics[width=0.9\linewidth]{"Images/100 Games Shared vs Unshared Open Map"}
+			\caption[Shared vs Unshared - Open Map]{Shared vs Unshared - Open Map}
+			\label{fig:100-games-shared-vs-unshared-open-map}
+		\end{figure}
+	In the run of Shared vs Unshared on the open map as seen here in Figure \ref{fig:open-map}, the Shared team won $53.0\%$ of $100$ runs. The team with the Unshared \ac{IM} won $47.0\%$.
+		
+		\clearpage
 		\subsection{Unshared vs Shared}
+		\begin{figure}[h!]
+			\centering
+			\includegraphics[width=0.9\linewidth]{"Images/100 Games Unshared vs Shared Open Map"}
+			\caption[Unshared vs Shared - Open Map]{Unshared vs Shared - Open Map}
+			\label{fig:100-games-unshared-vs-shared-open-map}
+		\end{figure}
+		In the run of Unshared vs Shared on the open map as seen here in Figure \ref{fig:open-map}, the Shared team won $36.0\%$ of $100$ runs. The team with the Unshared \ac{IM} won $64.0\%$. Shared and the Unshared team switched sides to see if it made a difference. 
+		
+		\clearpage
 		\subsection{Shared vs Shared}
+		\begin{figure}[h!]
+			\centering
+			\includegraphics[width=0.9\linewidth]{"Images/100 Games Shared vs Shared Open Map"}
+			\caption[Shared vs Shared - Open Map]{Shared vs Shared - Open Map}
+			\label{fig:100-games-shared-vs-shared-open-map}
+		\end{figure}
+		In the run of Shared vs Shared on the open map as seen here in Figure \ref{fig:open-map}, the blue Shared team won $57.0\%$ of $100$ runs. The orange team with the Shared \ac{IM} won $43.0\%$.
+		
+		\clearpage
 		\subsection{Unshared vs Unshared}
+		\begin{figure}[h!]
+			\centering
+			\includegraphics[width=0.9\linewidth]{"Images/100 Games Unshared vs Unshared Open Map"}
+			\caption[Unshared vs Unshared - Open Map]{Unshared vs Unshared - Open Map}
+			\label{fig:100-games-unshared-vs-unshared-open-map}
+		\end{figure}
+	In the run of Unshared vs Unshared on the open map as seen here in Figure \ref{fig:open-map}, the blue Unshared team won $60.0\%$ of $100$ runs. The orange team with the Unshared \ac{IM} won $40.0\%$.
+		
+		\clearpage
 		\section{Closed map}
 		\subsection{Shared vs Unshared}
+		\begin{figure}[h!]
+			\centering
+			\includegraphics[width=0.9\linewidth]{"Images/100 Games Shared vs Unshared Close Map"}
+			\caption[Shared vs Unshared - Closed Map]{Shared vs Unshared - Closed Map}
+			\label{fig:100-games-shared-vs-unshared-close-map}
+		\end{figure}
+		In the run of Shared vs Unshared on the closed map as seen here in Figure \ref{fig:close-map}, the Shared team won $57.0\%$ of $100$ runs. The team with the Unshared \ac{IM} won $43.0\%$.
+		
+		\clearpage
 		\subsection{Unshared vs Shared}
+		\begin{figure}[h!]
+			\centering
+			\includegraphics[width=0.9\linewidth]{"Images/100 Games Unshared vs Shared Close Map"}
+			\caption[Unshared vs Shared - Closed Map]{Unshared vs Shared - Closed Map}
+			\label{fig:100-games-unshared-vs-shared-close-map}
+		\end{figure}
+	In the run of Unshared vs Shared on the closed map as seen here in Figure \ref{fig:close-map}, the Shared team won $73.0\%$ of $100$ runs. The team with the Unshared \ac{IM} won $27.0\%$.
+		
+		\clearpage
 		\subsection{Shared vs Shared}
+		\begin{figure}[h!]
+			\centering
+			\includegraphics[width=0.9\linewidth]{"Images/100 Games Shared vs Shared Close Map"}
+			\caption[Shared vs Shared - Closed Map]{Shared vs Shared - Closed Map}
+			\label{fig:100-games-shared-vs-shared-close-map}
+		\end{figure}
+		In the run of Shared vs Shared on the closed map as seen here in Figure \ref{fig:close-map}, the blue Shared team won $52.0\%$ of $100$ runs. The orange team with the Shared \ac{IM} won $48.0\%$.
+		
+		\clearpage\clearpage
 		\subsection{Unshared vs Unshared}
+		\begin{figure}[h!]
+			\centering
+			\includegraphics[width=0.9\linewidth]{"Images/100 Games Unshared vs Unshared Close Map"}
+			\caption[Unshared vs Unshared - Closed Map]{Unshared vs Unshared - Closed Map}
+			\label{fig:100-games-unshared-vs-unshared-close-map}
+		\end{figure}
+			In the run of Unshared vs Unshared on the closed map as seen here in Figure \ref{fig:close-map}, the blue Unshared team won $94.0\%$ of $100$ runs. The orange team with the Unshared \ac{IM} won $6.0\%$.
+		
+		
 		\chapter{Discussion}
 		
 		\chapter{Conclusion}

@@ -1,19 +1,14 @@
-\begin{thebibliography}{7}
+\begin{thebibliography}{8}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[bat(2016)]{battlefield1modes}
-Battlefield 1, October 2016.
-\newblock URL
-  \url{https://www.ea.com/en-gb/games/battlefield/battlefield-1/modes?setLocale=en-gb}.
-
 \bibitem[Brewer and Graham(2020)]{knowledgeReprentation}
 Daniel Brewer and Rez" Graham.
 \newblock Knowledge is power: An overview of knowledge representation in game
-  ai, 07 2020.
+  ai, July 2020.
 \newblock URL \url{https://www.youtube.com/watch?v=Z6oZnDIgio4&t=994s}.
 
 \bibitem[Champandard(2021)]{gameDevInfluenceMap}
@@ -22,15 +17,25 @@ Alex~J. Champandard.
 \newblock URL
   \url{https://www.gamedev.net/tutorials/programming/artificial-intelligence/the-core-mechanics-of-influence-mapping-r2799/}.
 
+\bibitem[EA(2016)]{battlefield1modes}
+EA.
+\newblock Battlefield 1, October 2016.
+\newblock URL
+  \url{https://www.ea.com/en-gb/games/battlefield/battlefield-1/modes?setLocale=en-gb}.
+
 \bibitem[Handwiki(2021)]{boxblur}
 Handwiki.
 \newblock Box blur, December 2021.
 \newblock URL \url{https://handwiki.org/wiki/Box_blur}.
 
+\bibitem[Mark(2013)]{gameAIPro}
+Dave Mark.
+\newblock Modular tactical influence maps, September 2013.
+
 \bibitem[Mellington(2020)]{AIforGamesTactical}
 Ian Mellington.
 \newblock \emph{AI for Games}.
-\newblock Third edition edition, December 2020.
+\newblock CRC Press, third edition edition, December 2020.
 
 \bibitem[Rabin(2015)]{10.5555/2821138}
 Steven Rabin.
@@ -38,9 +43,9 @@ Steven Rabin.
 \newblock A. K. Peters, Ltd., USA, 2015.
 \newblock ISBN 1482254794.
 
-\bibitem[Unity~Random.Range()]{technologiesUnityRandomRange}
+\bibitem[Unity~Random.Range(2021)]{technologiesUnityRandomRange}
 Technologies Unity~Random.Range.
-\newblock Random.range.
+\newblock Random.range, August 2021.
 \newblock URL \url{https://docs.unity3d.com/ScriptReference/Random.Range.html}.
 
 \end{thebibliography}

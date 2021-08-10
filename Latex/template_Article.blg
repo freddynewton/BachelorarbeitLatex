@@ -9,15 +9,11 @@ Reallocated glb_str_ptr (elt_size=4) to 10 items from 0.
 Reallocated global_strs (elt_size=1001) to 10 items from 0.
 Reallocated glb_str_end (elt_size=4) to 10 items from 0.
 Database file #1: references.bib
-Warning--to sort, need author or key in battlefield1modes
-Warning--empty publisher in AIforGamesTactical
-Warning--empty year in technologiesUnityRandomRange
 
 Here's how much of BibTeX's memory you used:
- Cites:                 7 out of 750
- Fields:              182 out of 5000
- Hash table:         4789 out of 5000
- Strings:             634 out of 4000
- Free string pool:   5846 out of 65000
+ Cites:                 8 out of 750
+ Fields:              210 out of 5000
+ Hash table:         4787 out of 5000
+ Strings:             643 out of 4000
+ Free string pool:   5943 out of 65000
  Wizard functions:   2773 out of 3000
-(There were 3 warnings)

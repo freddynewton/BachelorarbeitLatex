@@ -143,13 +143,31 @@ During his studies, Mr Akdogan always wondered how the game AI shares its knowle
 	
 	\chapter{Related work}
 	In \cite{10.5555/2821138} article discussed how \ac{IM} works in general. As well as the important part of giving an agent or squad a memory of the current influence range on the map.\newline
-	The article \citep{gameDevInfluenceMap} discusses how \ac{IM} is implemented in the industry. Just like how an \ac{IM} behaves on maps with narrow aisles and few open areas.
+	The article \citep{gameDevInfluenceMap} discusses how \ac{IM} is implemented in the industry. Just like how an \ac{IM} behaves on maps with narrow aisles and few open areas. \newline
+	The possible modular structure was explained by Dave mark in the article \citep{gameAIPro} as well as a possible implementation. It was also explained where the possible power lies in \ac{IM}. This was also discussed in Chapter \ref{usage}. 
 	
 	\chapter{Theoretical background}
+	
+	\section{Tactical Game AI}
+	
+	
 	\section{Influence Map}
 	All information is taken from the book \ac{AI} for Games unless otherwise cited in this chapter \citep{AIforGamesTactical}.
 	
-	An \ac{IM} is used to record the current balance of Military Influence at each position in a level. Many factors can affect military influence, such as the proximity of a unit, the proximity of a base, the length of time a unit has been last seen, the terrain, the current weather, the strength of a unit. Many factors have only a small influence. Based on how the abstract image is drawn across the map or level of influence, more marginal information can be communicated to the \ac{AI} and tactical decisions can be made. 
+	An \ac{IM} is used to record the current balance of Military Influence at each position in a level. Many factors can affect military influence, such as the proximity of a unit, the proximity of a base, the length of time a unit has been last seen, the terrain, the current weather, the strength of a unit. Many factors have only a small influence. Based on how the abstract image is drawn across the map or level of influence, more marginal information can be communicated to the \ac{AI} and tactical decisions can be made.
+	
+	\subsection{Usage} \label{usage}
+	With \ac{IM}, one can arrange a collection and storage of map data so in usable forms. This information can then be further processed into three general categories \citep{gameAIPro}:
+	
+	\begin{enumerate}
+		\item Gathering information about our location and the area around us
+		\item Targeting locations
+		\item Movement destinations
+	\end{enumerate}
+	
+	\subsubsection{Information}
+	\subsubsection{Targeting}
+	\subsubsection{Movement}
 	
 	\subsection{Simple Influence} \label{ssec:num2}
 	The influence of a unit in an area consists of how much its influence is weighted. Assuming it is a Real Time Strategy game and there is a foot soldier unit and a tank. Normally, a tank has more lives, more damage and a longer range than a simple foot soldier. This means that a larger Influence value is taken and injected into the \ac{IM} at the unit's position. If you take the strength of a unit, it decreases with increasing distance. So the further away you are from the unit, the less influence it has. A linear drop-off model can be used for this. A doubling of the distance results in a halving impact:
@@ -290,7 +308,7 @@ During his studies, Mr Akdogan always wondered how the game AI shares its knowle
 		\section{Game mode adjustments}
 		Since in the game mode Conquest of Battlefield \citep{battlefield1modes} the current state of the capturable locations is always queried with a certain tick rate, this can lead to inaccurate values. Therefore the time a place is in possession of a team is counted to avoid the sampling problem.
 		
-		\section{Assumption}
+		\section{Assumption} \label{assumption}
 		The side with the squad and its five agents has a slightly higher win rate than the side with the 5 squads with one agent each. This is because it has more information to decide, for example, which of the points to attack first or which point may have no enemy units. 
 		
 		\section{Rules of the game}
@@ -322,6 +340,7 @@ During his studies, Mr Akdogan always wondered how the game AI shares its knowle
 		
 		\clearpage
 		\chapter{Results}
+		The shared team means that a squad of 5 agents share an \ac{IM}. For the Unshared Team, it is 5 squads with one agent each. So each squad has its own \ac{IM} and does not know what the \ac{IM} of the other squad looks like from the team. 
 		\section{Open map}
 		\subsection{Shared vs Unshared}
 		\begin{figure}[h!]
@@ -405,6 +424,8 @@ During his studies, Mr Akdogan always wondered how the game AI shares its knowle
 		
 		
 		\chapter{Discussion}
+		As in Chapter \ref{assumption}, the assumption was that the team with the \ac{SK} from the \ac{IM} has a higher win rate than the team in which each agent has its own \ac{IM}. \newline
+		What is immediately noticeable is that team 1 always wins in the 8 times 100 iterations, regardless of whether it is equipped with \ac{SK} or unshared knowledge. This can come from the fact that team 1 is the first in the calculation of the \ac{IM} from the sequential flow in the code. This could be one of the possibilities, but to confirm this would require running several 100 iteration packages of the respective team setup.
 		
 		\chapter{Conclusion}
 		

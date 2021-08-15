@@ -1,9 +1,9 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Boxblur influence example grid - Iteration 0. The inflow of two units was injected into a completely new \ac {IM}. The cell with the value $1.000$ is from the own team and the cell with the value $-1.000$ from the opposing team. }}{9}{table.3.1}%
-\contentsline {table}{\numberline {3.2}{\ignorespaces Boxblur influence example grid - Iteration 1. After the first iteration, from top left to bottom right, the cell was placed the 3 by 3 matrix. So that the center of the matrix lies on the cell and then calculated the mean value.}}{9}{table.3.2}%
-\contentsline {table}{\numberline {3.3}{\ignorespaces Boxblur influence example grid - Iteration 2}}{9}{table.3.3}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Boxblur influence example grid - Iteration 0. The inflow of two units was injected into a completely new \ac {IM}. The cell with the value $1.000$ is from the own team and the cell with the value $-1.000$ from the opposing team. }}{11}{table.3.1}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces Boxblur influence example grid - Iteration 1. After the first iteration, from top left to bottom right, the cell was placed the 3 by 3 matrix. So that the center of the matrix lies on the cell and then calculated the mean value.}}{11}{table.3.2}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces Boxblur influence example grid - Iteration 2}}{12}{table.3.3}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

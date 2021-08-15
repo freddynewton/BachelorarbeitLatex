@@ -142,8 +142,8 @@ During his studies, Mr Akdogan always wondered how the game AI shares its knowle
 	% TODO
 	
 	\chapter{Related work}
-	In \cite{10.5555/2821138} article discussed how \ac{IM} works in general. As well as the important part of giving an agent or squad a memory of the current influence range on the map.\newline
-	The article \citep{gameDevInfluenceMap} discusses how \ac{IM} is implemented in the industry. Just like how an \ac{IM} behaves on maps with narrow aisles and few open areas. \newline
+	In \cite{10.5555/2821138} article discussed how \ac{IM} works in general. As well as the important part of giving an agent or squad a memory of the current influence range on the map.\newline \newline
+	The article \citep{gameDevInfluenceMap} discusses how \ac{IM} is implemented in the industry. Just like how an \ac{IM} behaves on maps with narrow aisles and few open areas. \newline \newline
 	The possible modular structure was explained by Dave mark in the article \citep{gameAIPro} as well as a possible implementation. It was also explained where the possible power lies in \ac{IM}. This was also discussed in Chapter \ref{usage}. 
 	
 	\chapter{Theoretical background}
@@ -215,7 +215,42 @@ During his studies, Mr Akdogan always wondered how the game AI shares its knowle
 	\subsection{Influence Map Setup}
 	All information in this section is quoted from the article \citep{gameDevInfluenceMap}. Otherwise they are cited as such. \newline
 	
-	For the \ac{IM}, a 2-dimensional grid is stretched over the map and divided into a grid system. Then, all areas that cannot be walked on, such as walls or similar, are excluded from the calculation and ignored. This enables the unknown and the FOW. Because with this, the influence does not propar through obstacles but around them. After that, the cells that have the shortest distance to each agent are injected with their influence in the 2 dimensional grid. This means that these cells are always set to the influence value of the unit regardless of anything else. After setting the values of each agent in the IM, a blur algorithm is applied as explained in the chapter \ref{ssec:num1}. The choice of which blur method is best suited for each game depends heavily on the game designer. For example, depending on whether there are many walls on the level or more open vials, it can be decided whether to use one of the distance-based blur algorithms described in Chapter \ref{ssec:num2} or a blur algorithm from Chapter \ref{ssec:num1}. The important thing is to only apply this to cells that are accessible. Thus, the influence must propargize around walls and no distorted image is transmitted. The value from the blur algorithm is then multiplied by the decay to implement a decay of the influence on the range. 
+	\subsubsection{2D Grid}
+	For the \ac{IM}, a 2-dimensional grid is stretched over the map and divided into a grid system. Then, all areas that cannot be walked on, such as walls or similar, are excluded from the calculation and ignored. This enables the unknown and the \ac{FOW}. Because with this, the influence does not propar through obstacles but around them. After that, the cells that have the shortest distance to each agent are injected with their influence in the 2 dimensional grid. This means that these cells are always set to the influence value of the unit regardless of anything else. 
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.8\linewidth]{Images/screenshot001_2dGrid}
+		\caption[Fine Grid influence map]{Fine Grid \ac{IM}. The \ac{IM} of this thesis was also built in the same style. Thus the cells are small enough not to protrude over walls and objects. This is good for maps with few open spaces and narrow passages. \citep{gameDevInfluenceMap} \citep{imPathfinding}}
+		\label{fig:screenshot0012dgrid}
+	\end{figure}
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.8\linewidth]{Images/screenshot001_2dGrid2}
+		\caption[Coarse grid influence map.]{Coarse grid \ac{IM}. With this map, large cells are placed on the map without taking into account whether the cell goes over the wall or not. This is good if you have open areas and few narrow passages. \citep{gameDevInfluenceMap} \citep{imPathfinding}}
+		\label{fig:screenshot0012dgrid2}
+	\end{figure}
+	
+	\newpage
+	\subsubsection{Area Graph}
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.8\linewidth]{Images/screenshot001_aregraph1}
+		\caption[Area graph influence map.]{Area graph influence map. \citep{gameDevInfluenceMap} \citep{imPathfinding}}
+		\label{fig:screenshot001aregraph1}
+	\end{figure}
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.8\linewidth]{Images/screenshot001_aregraph2}
+		\caption[Waypoint network influence map.]{Waypoint network influence map. \citep{gameDevInfluenceMap} \citep{imPathfinding}}
+		\label{fig:screenshot001aregraph2}
+	\end{figure}
+	
+	\newpage
+	\subsubsection{Properties}
+	After setting the values of each agent in the IM, a blur algorithm is applied as explained in the chapter \ref{ssec:num1}. The choice of which blur method is best suited for each game depends heavily on the game designer. For example, depending on whether there are many walls on the level or more open vials, it can be decided whether to use one of the distance-based blur algorithms described in Chapter \ref{ssec:num2} or a blur algorithm from Chapter \ref{ssec:num1}. The important thing is to only apply this to cells that are accessible. Thus, the influence must propargize around walls and no distorted image is transmitted. The value from the blur algorithm is then multiplied by the decay to implement a decay of the influence on the range. 
 	
 	\begin{equation}
 		I_{xy} = b_{xy} * D

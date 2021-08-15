@@ -1,19 +1,62 @@
-This is 8-bit Big BibTeX version 0.99d
-Implementation:  Microsoft(R) C/C++ for Win32
-Release version: 3.71 (04 mar 2019)
-
-The 8-bit codepage and sorting file: 88591lat.csf
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: template_Article.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
 The style file: plainnat.bst
-Reallocated glb_str_ptr (elt_size=4) to 10 items from 0.
-Reallocated global_strs (elt_size=1001) to 10 items from 0.
-Reallocated glb_str_end (elt_size=4) to 10 items from 0.
+Reallocating 'name_of_file' (item size: 1) to 11 items.
 Database file #1: references.bib
-
-Here's how much of BibTeX's memory you used:
- Cites:                 8 out of 750
- Fields:              210 out of 5000
- Hash table:         4787 out of 5000
- Strings:             643 out of 4000
- Free string pool:   5943 out of 65000
- Wizard functions:   2773 out of 3000
+I was expecting a `,' or a `}'---line 30 of file references.bib
+ :  
+ :  institution = {University of Southern California,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Too many commas in name 1 of "Michael van Lent, Paul Carpenter, Ryan McAlinden, Poey Guan Tan" for entry tacticalGameAi
+while executing---line 1347 of file plainnat.bst
+Too many commas in name 1 of "Michael van Lent, Paul Carpenter, Ryan McAlinden, Poey Guan Tan" for entry tacticalGameAi
+while executing---line 1347 of file plainnat.bst
+Too many commas in name 1 of "Michael van Lent, Paul Carpenter, Ryan McAlinden, Poey Guan Tan" for entry tacticalGameAi
+while executing---line 1429 of file plainnat.bst
+Too many commas in name 1 of "Michael van Lent, Paul Carpenter, Ryan McAlinden, Poey Guan Tan" for entry tacticalGameAi
+while executing---line 1429 of file plainnat.bst
+You've used 10 entries,
+            2773 wiz_defined-function locations,
+            658 strings with 6352 characters,
+and the built_in function-call counts, 3069 in all, are:
+= -- 258
+> -- 111
+< -- 10
++ -- 43
+- -- 33
+* -- 174
+:= -- 474
+add.period$ -- 29
+call.type$ -- 10
+change.case$ -- 40
+chr.to.int$ -- 10
+cite$ -- 20
+duplicate$ -- 160
+empty$ -- 321
+format.name$ -- 45
+if$ -- 649
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 4
+newline$ -- 57
+num.names$ -- 40
+pop$ -- 120
+preamble$ -- 1
+purify$ -- 31
+quote$ -- 0
+skip$ -- 133
+stack$ -- 0
+substring$ -- 20
+swap$ -- 17
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 100
+warning$ -- 0
+while$ -- 30
+width$ -- 0
+write$ -- 127
+(There were 5 error messages)

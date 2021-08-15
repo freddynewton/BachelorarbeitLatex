@@ -9,32 +9,32 @@
 \contentsline {subsection}{\numberline {3.2.1}Usage}{5}{subsection.3.2.1}%
 \contentsline {subsubsection}{\numberline {3.2.1.1}Information}{6}{subsubsection.3.2.1.1}%
 \contentsline {subsubsection}{\numberline {3.2.1.2}Targeting}{6}{subsubsection.3.2.1.2}%
-\contentsline {subsubsection}{\numberline {3.2.1.3}Movement}{6}{subsubsection.3.2.1.3}%
+\contentsline {subsubsection}{\numberline {3.2.1.3}Movement / Positioning}{6}{subsubsection.3.2.1.3}%
 \contentsline {subsection}{\numberline {3.2.2}Simple Influence}{6}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Calculating the Influence}{6}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.3}Calculating the Influence}{7}{subsection.3.2.3}%
 \contentsline {subsection}{\numberline {3.2.4}Dealing with unknowns}{7}{subsection.3.2.4}%
-\contentsline {subsection}{\numberline {3.2.5}Influence Map Setup}{7}{subsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.2.5}Influence Map Setup}{8}{subsection.3.2.5}%
 \contentsline {section}{\numberline {3.3}Blur }{8}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Waypoints}{9}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Experimental setup}{10}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Game mode adjustments}{10}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Assumption}{10}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Rules of the game}{11}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Playing field construction}{11}{subsection.4.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.1.1}Open map structure}{11}{subsubsection.4.3.1.1}%
-\contentsline {subsubsection}{\numberline {4.3.1.2}Closed map Structure}{12}{subsubsection.4.3.1.2}%
-\contentsline {subsection}{\numberline {4.3.2}Randomness factor}{12}{subsection.4.3.2}%
-\contentsline {chapter}{\numberline {5}Results}{13}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Open map}{13}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Shared vs Unshared}{13}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Unshared vs Shared}{15}{subsection.5.1.2}%
-\contentsline {subsection}{\numberline {5.1.3}Shared vs Shared}{16}{subsection.5.1.3}%
-\contentsline {subsection}{\numberline {5.1.4}Unshared vs Unshared}{17}{subsection.5.1.4}%
-\contentsline {section}{\numberline {5.2}Closed map}{18}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Shared vs Unshared}{18}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Unshared vs Shared}{19}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Shared vs Shared}{20}{subsection.5.2.3}%
-\contentsline {subsection}{\numberline {5.2.4}Unshared vs Unshared}{21}{subsection.5.2.4}%
-\contentsline {chapter}{\numberline {6}Discussion}{22}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Conclusion}{23}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Lists}{24}{chapter.8}%
+\contentsline {section}{\numberline {3.4}Waypoints}{10}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Experimental setup}{11}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Game mode adjustments}{11}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Assumption}{11}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Rules of the game}{12}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Playing field construction}{12}{subsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.1.1}Open map structure}{12}{subsubsection.4.3.1.1}%
+\contentsline {subsubsection}{\numberline {4.3.1.2}Closed map Structure}{13}{subsubsection.4.3.1.2}%
+\contentsline {subsection}{\numberline {4.3.2}Randomness factor}{13}{subsection.4.3.2}%
+\contentsline {chapter}{\numberline {5}Results}{14}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Open map}{14}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Shared vs Unshared}{14}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Unshared vs Shared}{16}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Shared vs Shared}{17}{subsection.5.1.3}%
+\contentsline {subsection}{\numberline {5.1.4}Unshared vs Unshared}{18}{subsection.5.1.4}%
+\contentsline {section}{\numberline {5.2}Closed map}{19}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Shared vs Unshared}{19}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Unshared vs Shared}{20}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Shared vs Shared}{21}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Unshared vs Unshared}{22}{subsection.5.2.4}%
+\contentsline {chapter}{\numberline {6}Discussion}{23}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Conclusion}{24}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Lists}{25}{chapter.8}%

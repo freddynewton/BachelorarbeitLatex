@@ -50,12 +50,19 @@
 \acronymused{IM}
 \acronymused{IM}
 \acronymused{IM}
+\citation{tacticalGameAi}
 \citation{AIforGamesTactical}
 \citation{gameAIPro}
 \@writefile{toc}{\contentsline {chapter}{\numberline {3}Theoretical background}{5}{chapter.3}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{toc}{\contentsline {section}{\numberline {3.1}Tactical Game AI}{5}{section.3.1}\protected@file@percent }
+\AC@undonewlabel{acro:RTS}
+\newlabel{acro:RTS}{{3.1}{5}{Tactical Game AI}{section*.7}{}}
+\acronymused{RTS}
+\acronymused{AI}
+\acronymused{AI}
+\acronymused{AI}
 \@writefile{toc}{\contentsline {section}{\numberline {3.2}Influence Map}{5}{section.3.2}\protected@file@percent }
 \acronymused{AI}
 \acronymused{IM}
@@ -63,19 +70,32 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Usage}{5}{subsection.3.2.1}\protected@file@percent }
 \newlabel{usage}{{3.2.1}{5}{Usage}{subsection.3.2.1}{}}
 \acronymused{IM}
+\citation{gameAIPro}
+\citation{gameAIPro}
+\citation{gameAIPro}
+\citation{gameAIPro}
+\citation{imPathfinding}
+\citation{imPathfinding}
+\citation{imPathfinding}
+\citation{imPathfinding}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1.1}Information}{6}{subsubsection.3.2.1.1}\protected@file@percent }
+\acronymused{IM}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1.2}Targeting}{6}{subsubsection.3.2.1.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1.3}Movement}{6}{subsubsection.3.2.1.3}\protected@file@percent }
+\acronymused{IM}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1.3}Movement / Positioning}{6}{subsubsection.3.2.1.3}\protected@file@percent }
+\acronymused{IM}
+\acronymused{IM}
+\acronymused{IM}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Simple Influence}{6}{subsection.3.2.2}\protected@file@percent }
 \newlabel{ssec:num2}{{3.2.2}{6}{Simple Influence}{subsection.3.2.2}{}}
 \acronymused{IM}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}Calculating the Influence}{6}{subsection.3.2.3}\protected@file@percent }
-\acronymused{IM}
 \citation{gameDevInfluenceMap}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}Calculating the Influence}{7}{subsection.3.2.3}\protected@file@percent }
+\acronymused{IM}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.4}Dealing with unknowns}{7}{subsection.3.2.4}\protected@file@percent }
 \newlabel{ssec:dwu}{{3.2.4}{7}{Dealing with unknowns}{subsection.3.2.4}{}}
 \AC@undonewlabel{acro:FOW}
-\newlabel{acro:FOW}{{3.2.4}{7}{Dealing with unknowns}{section*.7}{}}
+\newlabel{acro:FOW}{{3.2.4}{7}{Dealing with unknowns}{section*.8}{}}
 \acronymused{FOW}
 \acronymused{SK}
 \acronymused{IM}
@@ -83,85 +103,86 @@
 \acronymused{AI}
 \acronymused{AI}
 \acronymused{FOW}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.5}Influence Map Setup}{7}{subsection.3.2.5}\protected@file@percent }
-\acronymused{IM}
 \citation{gameDevInfluenceMap}
-\citation{boxblur}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.5}Influence Map Setup}{8}{subsection.3.2.5}\protected@file@percent }
+\acronymused{IM}
 \acronymused{IM}
 \@writefile{toc}{\contentsline {section}{\numberline {3.3}Blur }{8}{section.3.3}\protected@file@percent }
 \newlabel{ssec:num1}{{3.3}{8}{Blur}{section.3.3}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces Boxblur influence example grid - Iteration 0. The inflow of two units was injected into a completely new \ac {IM}. The cell with the value $1.000$ is from the own team and the cell with the value $-1.000$ from the opposing team. }}{8}{table.3.1}\protected@file@percent }
+\citation{boxblur}
+\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces Boxblur influence example grid - Iteration 0. The inflow of two units was injected into a completely new \ac {IM}. The cell with the value $1.000$ is from the own team and the cell with the value $-1.000$ from the opposing team. }}{9}{table.3.1}\protected@file@percent }
 \acronymused{IM}
-\newlabel{tab:Boxblur grid Iteration 0}{{3.1}{8}{Boxblur influence example grid - Iteration 0. The inflow of two units was injected into a completely new \ac {IM}. The cell with the value $1.000$ is from the own team and the cell with the value $-1.000$ from the opposing team}{table.3.1}{}}
-\citation{AIforGamesTactical}
+\newlabel{tab:Boxblur grid Iteration 0}{{3.1}{9}{Boxblur influence example grid - Iteration 0. The inflow of two units was injected into a completely new \ac {IM}. The cell with the value $1.000$ is from the own team and the cell with the value $-1.000$ from the opposing team}{table.3.1}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {3.2}{\ignorespaces Boxblur influence example grid - Iteration 1. After the first iteration, from top left to bottom right, the cell was placed the 3 by 3 matrix. So that the center of the matrix lies on the cell and then calculated the mean value.}}{9}{table.3.2}\protected@file@percent }
 \newlabel{tab:Boxblur grid Iteration 1}{{3.2}{9}{Boxblur influence example grid - Iteration 1. After the first iteration, from top left to bottom right, the cell was placed the 3 by 3 matrix. So that the center of the matrix lies on the cell and then calculated the mean value}{table.3.2}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {3.3}{\ignorespaces Boxblur influence example grid - Iteration 2}}{9}{table.3.3}\protected@file@percent }
 \newlabel{tab:Boxblur grid Iteration 2}{{3.3}{9}{Boxblur influence example grid - Iteration 2}{table.3.3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.4}Waypoints}{9}{section.3.4}\protected@file@percent }
+\citation{AIforGamesTactical}
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Waypoints}{10}{section.3.4}\protected@file@percent }
+\newlabel{waypoint}{{3.4}{10}{Waypoints}{section.3.4}{}}
 \acronymused{AI}
 \citation{battlefield1modes}
 \citation{battlefield1modes}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Experimental setup}{10}{chapter.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Experimental setup}{11}{chapter.4}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \acronymused{IM}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Game mode adjustments}{10}{section.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Assumption}{10}{section.4.2}\protected@file@percent }
-\newlabel{assumption}{{4.2}{10}{Assumption}{section.4.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Rules of the game}{11}{section.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Playing field construction}{11}{subsection.4.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Game mode adjustments}{11}{section.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Assumption}{11}{section.4.2}\protected@file@percent }
+\newlabel{assumption}{{4.2}{11}{Assumption}{section.4.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Rules of the game}{12}{section.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Playing field construction}{12}{subsection.4.3.1}\protected@file@percent }
 \acronymused{FOW}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1.1}Open map structure}{11}{subsubsection.4.3.1.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Open map structure}}{11}{figure.4.1}\protected@file@percent }
-\newlabel{fig:open-map}{{4.1}{11}{Open map structure}{figure.4.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1.1}Open map structure}{12}{subsubsection.4.3.1.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Open map structure}}{12}{figure.4.1}\protected@file@percent }
+\newlabel{fig:open-map}{{4.1}{12}{Open map structure}{figure.4.1}{}}
 \citation{technologiesUnityRandomRange}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1.2}Closed map Structure}{12}{subsubsection.4.3.1.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Close map structure}}{12}{figure.4.2}\protected@file@percent }
-\newlabel{fig:close-map}{{4.2}{12}{Close map structure}{figure.4.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}Randomness factor}{12}{subsection.4.3.2}\protected@file@percent }
-\newlabel{ssec:rf}{{4.3.2}{12}{Randomness factor}{subsection.4.3.2}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Results}{13}{chapter.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1.2}Closed map Structure}{13}{subsubsection.4.3.1.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Close map structure}}{13}{figure.4.2}\protected@file@percent }
+\newlabel{fig:close-map}{{4.2}{13}{Close map structure}{figure.4.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}Randomness factor}{13}{subsection.4.3.2}\protected@file@percent }
+\newlabel{ssec:rf}{{4.3.2}{13}{Randomness factor}{subsection.4.3.2}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Results}{14}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \acronymused{IM}
 \acronymused{IM}
 \acronymused{IM}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Open map}{13}{section.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Shared vs Unshared}{13}{subsection.5.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Open map}{14}{section.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Shared vs Unshared}{14}{subsection.5.1.1}\protected@file@percent }
 \acronymused{IM}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Shared vs Unshared - Open Map}}{14}{figure.5.1}\protected@file@percent }
-\newlabel{fig:100-games-shared-vs-unshared-open-map}{{5.1}{14}{Shared vs Unshared - Open Map}{figure.5.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Unshared vs Shared}{15}{subsection.5.1.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Unshared vs Shared - Open Map}}{15}{figure.5.2}\protected@file@percent }
-\newlabel{fig:100-games-unshared-vs-shared-open-map}{{5.2}{15}{Unshared vs Shared - Open Map}{figure.5.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Shared vs Unshared - Open Map}}{15}{figure.5.1}\protected@file@percent }
+\newlabel{fig:100-games-shared-vs-unshared-open-map}{{5.1}{15}{Shared vs Unshared - Open Map}{figure.5.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Unshared vs Shared}{16}{subsection.5.1.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Unshared vs Shared - Open Map}}{16}{figure.5.2}\protected@file@percent }
+\newlabel{fig:100-games-unshared-vs-shared-open-map}{{5.2}{16}{Unshared vs Shared - Open Map}{figure.5.2}{}}
 \acronymused{IM}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.3}Shared vs Shared}{16}{subsection.5.1.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Shared vs Shared - Open Map}}{16}{figure.5.3}\protected@file@percent }
-\newlabel{fig:100-games-shared-vs-shared-open-map}{{5.3}{16}{Shared vs Shared - Open Map}{figure.5.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.3}Shared vs Shared}{17}{subsection.5.1.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Shared vs Shared - Open Map}}{17}{figure.5.3}\protected@file@percent }
+\newlabel{fig:100-games-shared-vs-shared-open-map}{{5.3}{17}{Shared vs Shared - Open Map}{figure.5.3}{}}
 \acronymused{IM}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.4}Unshared vs Unshared}{17}{subsection.5.1.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Unshared vs Unshared - Open Map}}{17}{figure.5.4}\protected@file@percent }
-\newlabel{fig:100-games-unshared-vs-unshared-open-map}{{5.4}{17}{Unshared vs Unshared - Open Map}{figure.5.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.4}Unshared vs Unshared}{18}{subsection.5.1.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Unshared vs Unshared - Open Map}}{18}{figure.5.4}\protected@file@percent }
+\newlabel{fig:100-games-unshared-vs-unshared-open-map}{{5.4}{18}{Unshared vs Unshared - Open Map}{figure.5.4}{}}
 \acronymused{IM}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Closed map}{18}{section.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Shared vs Unshared}{18}{subsection.5.2.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Shared vs Unshared - Closed Map}}{18}{figure.5.5}\protected@file@percent }
-\newlabel{fig:100-games-shared-vs-unshared-close-map}{{5.5}{18}{Shared vs Unshared - Closed Map}{figure.5.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Closed map}{19}{section.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Shared vs Unshared}{19}{subsection.5.2.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Shared vs Unshared - Closed Map}}{19}{figure.5.5}\protected@file@percent }
+\newlabel{fig:100-games-shared-vs-unshared-close-map}{{5.5}{19}{Shared vs Unshared - Closed Map}{figure.5.5}{}}
 \acronymused{IM}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}Unshared vs Shared}{19}{subsection.5.2.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces Unshared vs Shared - Closed Map}}{19}{figure.5.6}\protected@file@percent }
-\newlabel{fig:100-games-unshared-vs-shared-close-map}{{5.6}{19}{Unshared vs Shared - Closed Map}{figure.5.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}Unshared vs Shared}{20}{subsection.5.2.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces Unshared vs Shared - Closed Map}}{20}{figure.5.6}\protected@file@percent }
+\newlabel{fig:100-games-unshared-vs-shared-close-map}{{5.6}{20}{Unshared vs Shared - Closed Map}{figure.5.6}{}}
 \acronymused{IM}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.3}Shared vs Shared}{20}{subsection.5.2.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces Shared vs Shared - Closed Map}}{20}{figure.5.7}\protected@file@percent }
-\newlabel{fig:100-games-shared-vs-shared-close-map}{{5.7}{20}{Shared vs Shared - Closed Map}{figure.5.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.3}Shared vs Shared}{21}{subsection.5.2.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces Shared vs Shared - Closed Map}}{21}{figure.5.7}\protected@file@percent }
+\newlabel{fig:100-games-shared-vs-shared-close-map}{{5.7}{21}{Shared vs Shared - Closed Map}{figure.5.7}{}}
 \acronymused{IM}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.4}Unshared vs Unshared}{21}{subsection.5.2.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces Unshared vs Unshared - Closed Map}}{21}{figure.5.8}\protected@file@percent }
-\newlabel{fig:100-games-unshared-vs-unshared-close-map}{{5.8}{21}{Unshared vs Unshared - Closed Map}{figure.5.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.4}Unshared vs Unshared}{22}{subsection.5.2.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces Unshared vs Unshared - Closed Map}}{22}{figure.5.8}\protected@file@percent }
+\newlabel{fig:100-games-unshared-vs-unshared-close-map}{{5.8}{22}{Unshared vs Unshared - Closed Map}{figure.5.8}{}}
 \acronymused{IM}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Discussion}{22}{chapter.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Discussion}{23}{chapter.6}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \acronymused{SK}
@@ -169,10 +190,10 @@
 \acronymused{IM}
 \acronymused{SK}
 \acronymused{IM}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Conclusion}{23}{chapter.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Conclusion}{24}{chapter.7}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{\numberline {8}Lists}{24}{chapter.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {8}Lists}{25}{chapter.8}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \newacro{IM}[\AC@hyperlink{IM}{IM}]{influence map}
@@ -180,14 +201,17 @@
 \newacro{AI}[\AC@hyperlink{AI}{AI}]{artificial intelligence}
 \newacro{GDC}[\AC@hyperlink{GDC}{GDC}]{game developers conference}
 \newacro{SK}[\AC@hyperlink{SK}{SK}]{shared knowledge}
+\newacro{RTS}[\AC@hyperlink{RTS}{RTS}]{Real Time Strategy}
 \bibdata{references}
 \acronymused{IM}
-\bibcite{knowledgeReprentation}{{1}{2020}{{Brewer and Graham}}{{}}}
-\bibcite{gameDevInfluenceMap}{{2}{2021}{{Champandard}}{{}}}
-\bibcite{battlefield1modes}{{3}{2016}{{EA}}{{}}}
-\bibcite{boxblur}{{4}{2021}{{Handwiki}}{{}}}
-\bibcite{gameAIPro}{{5}{2013}{{Mark}}{{}}}
-\bibcite{AIforGamesTactical}{{6}{2020}{{Mellington}}{{}}}
-\bibcite{10.5555/2821138}{{7}{2015}{{Rabin}}{{}}}
-\bibcite{technologiesUnityRandomRange}{{8}{2021}{{Unity~Random.Range}}{{}}}
-\gdef \@abspage@last{30}
+\bibcite{imPathfinding}{{1}{2014}{{Adaixo}}{{}}}
+\bibcite{knowledgeReprentation}{{2}{2020}{{Brewer and Graham}}{{}}}
+\bibcite{gameDevInfluenceMap}{{3}{2021}{{Champandard}}{{}}}
+\bibcite{battlefield1modes}{{4}{2016}{{EA}}{{}}}
+\bibcite{boxblur}{{5}{2021}{{Handwiki}}{{}}}
+\bibcite{gameAIPro}{{6}{2013}{{Mark}}{{}}}
+\bibcite{AIforGamesTactical}{{7}{2020}{{Mellington}}{{}}}
+\bibcite{tacticalGameAi}{{8}{2002}{{Michael~van Lent}}{{}}}
+\bibcite{10.5555/2821138}{{9}{2015}{{Rabin}}{{}}}
+\bibcite{technologiesUnityRandomRange}{{10}{2021}{{Unity~Random.Range}}{{}}}
+\gdef \@abspage@last{31}

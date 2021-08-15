@@ -149,10 +149,12 @@ During his studies, Mr Akdogan always wondered how the game AI shares its knowle
 	\chapter{Theoretical background}
 	
 	\section{Tactical Game AI}
+	In \ac{RTS} games, for example, there are many tasks for the \ac{AI} on a tactical and strategic level. Tasks are completed for one or more agents to simulate tactical behaviour. With such an interface, \ac{AI} planners can be generated and high-level battle plans can be created. These will then be executed by the tactical \ac{AI} in the micromanagement system. \citep{tacticalGameAi} \newline
 	
 	
 	\section{Influence Map}
 	All information is taken from the book \ac{AI} for Games unless otherwise cited in this chapter \citep{AIforGamesTactical}.
+	\newline
 	
 	An \ac{IM} is used to record the current balance of Military Influence at each position in a level. Many factors can affect military influence, such as the proximity of a unit, the proximity of a base, the length of time a unit has been last seen, the terrain, the current weather, the strength of a unit. Many factors have only a small influence. Based on how the abstract image is drawn across the map or level of influence, more marginal information can be communicated to the \ac{AI} and tactical decisions can be made.
 	
@@ -166,8 +168,17 @@ During his studies, Mr Akdogan always wondered how the game AI shares its knowle
 	\end{enumerate}
 	
 	\subsubsection{Information}
+	The simplest form of information that the \ac{IM} can represent is what the status of a cell is at a particular point. The status can be, for example, whether the cell is accessible or whether there is a collider that cannot be crossed \citep{gameAIPro}. This can then be extended with functions that return the cell with the highest or lowest influence value, as well as the status of the cells around you from the cell \citep{gameAIPro}. 
+	For example, to find out where the current danger from the enemies is from the position on which the agent is standing. This is then calculated with the influence value of the enemy influence and tells how high the threat is \citep{gameAIPro}. 
+	
 	\subsubsection{Targeting}
-	\subsubsection{Movement}
+	One of the other uses of \ac{IM} is for deciding which target to attack. For example, caching the cell in IM with the lowest influence value suggests the location with the most enemy agents. Therefore, depending on how aggressive or passive the agents are, this location can be avoided or moved into focus. \citep{gameAIPro}
+	
+	\subsubsection{Movement / Positioning}
+	\ac{IM} can have a great influence on pathfinding and pathfollowing. The same applies to tactical shooters and the positioning of agents, for which waypoints can be added as in Chapter  \ref{waypoint}.
+	With this, a direction vector can be created with the high point of the highest concentration of influence values of the opponents in order to get the direction of how an agent can flee or retreat. \newline \newline
+	Pathfinding based on \ac{IM} opens new ways to deal with dynamic environments \citep{imPathfinding}. The path generation can react to game-typical properties (for example: line of sight, sound, faction location, etc.) \citep{imPathfinding}. This allows agents to better navigate through the environment. For high-level strategic games, IM displays general objectives for the pathfinder so that they can reach their goal as quickly as possible. For low-level tactical decision-making, in-game events are added to the \ac{IM} (for example: a grenade exploding, shots flying by, sound propagation, etc.) \citep{imPathfinding}. Therefore, paths can always be rescheduled and recalculated based on these events \citep{imPathfinding}. 
+	
 	
 	\subsection{Simple Influence} \label{ssec:num2}
 	The influence of a unit in an area consists of how much its influence is weighted. Assuming it is a Real Time Strategy game and there is a foot soldier unit and a tank. Normally, a tank has more lives, more damage and a longer range than a simple foot soldier. This means that a larger Influence value is taken and injected into the \ac{IM} at the unit's position. If you take the strength of a unit, it decreases with increasing distance. So the further away you are from the unit, the less influence it has. A linear drop-off model can be used for this. A doubling of the distance results in a halving impact:
@@ -202,7 +213,7 @@ During his studies, Mr Akdogan always wondered how the game AI shares its knowle
 	Here, only the influence of units that can be seen in their radius is calculated for the unit. Thus, an aspect called \ac{FOW} is built in. This is important for investigating whether the \ac{SK} of units makes a difference. In this way, units also have a maximum distance they can see and can only build a personal \ac{IM} based on the friendly or enemy units they can see and incorporate this into their decisions. This can lead to problems for the \ac{AI} decision making, because it does not have the same memory as humans have and cannot map the context. Therefore, it is important to give the \ac{AI} some kind of memory. This can be mapped well with IM so that the \ac{AI} can manage well in the \ac{FOW}. It will also be very interesting to see if it makes a significant difference between the Shared and Unshared Knowledge Teams.
 	
 	\subsection{Influence Map Setup}
-	All information in this section is quoted from the article \citep{gameDevInfluenceMap}. Otherwise they are cited as such.
+	All information in this section is quoted from the article \citep{gameDevInfluenceMap}. Otherwise they are cited as such. \newline
 	
 	For the \ac{IM}, a 2-dimensional grid is stretched over the map and divided into a grid system. Then, all areas that cannot be walked on, such as walls or similar, are excluded from the calculation and ignored. This enables the unknown and the FOW. Because with this, the influence does not propar through obstacles but around them. After that, the cells that have the shortest distance to each agent are injected with their influence in the 2 dimensional grid. This means that these cells are always set to the influence value of the unit regardless of anything else. After setting the values of each agent in the IM, a blur algorithm is applied as explained in the chapter \ref{ssec:num1}. The choice of which blur method is best suited for each game depends heavily on the game designer. For example, depending on whether there are many walls on the level or more open vials, it can be decided whether to use one of the distance-based blur algorithms described in Chapter \ref{ssec:num2} or a blur algorithm from Chapter \ref{ssec:num1}. The important thing is to only apply this to cells that are accessible. Thus, the influence must propargize around walls and no distorted image is transmitted. The value from the blur algorithm is then multiplied by the decay to implement a decay of the influence on the range. 
 	
@@ -225,7 +236,7 @@ During his studies, Mr Akdogan always wondered how the game AI shares its knowle
 		\end {description}
 		
 		\section{Blur } \label{ssec:num1}
-		For the calculation of the influence on maps with narrow corridors and small areas a blur algorithm is used \citep{gameDevInfluenceMap}. This suggests that the algorithm is not affected by obstacles. Thus the influence flows around the corners. In this work, a boxblur algorithm was applied. But it would work just as well with a Gaussian blur. This is open to the individual preferences of how the influence should spread. For this work, the boxblur algorithm was chosen because it provides a more uniform distribution in all directions of influence. 
+		For the calculation of the influence on maps with narrow corridors and small areas a blur algorithm is used \citep{gameDevInfluenceMap}. \newline This suggests that the algorithm is not affected by obstacles. Thus the influence flows around the corners. In this work, a boxblur algorithm was applied. But it would work just as well with a Gaussian blur. This is open to the individual preferences of how the influence should spread. For this work, the boxblur algorithm was chosen because it provides a more uniform distribution in all directions of influence. 
 		
 		\begin{table}[H]
 			\centering
@@ -297,7 +308,7 @@ During his studies, Mr Akdogan always wondered how the game AI shares its knowle
 		
 		Through this box blur, the influence is gradually expanded with $1.000$ and $-1.000$ and then stagnates after a certain iteration. The Celle with $1.000$ means that there is an allied unit that places its influence there and $-1.000$ means that there is an enemy unit.
 		
-		\section{Waypoints}
+		\section{Waypoints} \label{waypoint}
 		Waypoints are positions distributed around the game world. With waypoints, the \ac{AI} can use this for its pathfinder in order to progress in the game world. Tactical waypoints require more data describing these points in order to make a correct decision about which waypoint to use \citep{AIforGamesTactical}.
 		
 		\chapter{Experimental setup}
@@ -439,6 +450,7 @@ During his studies, Mr Akdogan always wondered how the game AI shares its knowle
 			\acro{AI}{artificial intelligence}
 			\acro{GDC}{game developers conference}
 			\acro{SK}{shared knowledge}
+			\acro{RTS}{Real Time Strategy}
 		\end{acronym}
 		
 		\listoffigures

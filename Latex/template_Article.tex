@@ -215,35 +215,36 @@ During his studies, Mr Akdogan always wondered how the game AI shares its knowle
 	\subsection{Influence Map Setup}
 	All information in this section is quoted from the article \citep{gameDevInfluenceMap}. Otherwise they are cited as such. \newline
 	
-	\subsubsection{2D Grid}
+	\subsubsection{2D Grid} \label{2dgrid}
 	For the \ac{IM}, a 2-dimensional grid is stretched over the map and divided into a grid system. Then, all areas that cannot be walked on, such as walls or similar, are excluded from the calculation and ignored. This enables the unknown and the \ac{FOW}. Because with this, the influence does not propar through obstacles but around them. After that, the cells that have the shortest distance to each agent are injected with their influence in the 2 dimensional grid. This means that these cells are always set to the influence value of the unit regardless of anything else. 
 	
 	\begin{figure}[h!]
 		\centering
-		\includegraphics[width=0.8\linewidth]{Images/screenshot001_2dGrid}
+		\includegraphics[width=1\linewidth]{Images/screenshot001_2dGrid}
 		\caption[Fine Grid influence map]{Fine Grid \ac{IM}. The \ac{IM} of this thesis was also built in the same style. Thus the cells are small enough not to protrude over walls and objects. This is good for maps with few open spaces and narrow passages. \citep{gameDevInfluenceMap} \citep{imPathfinding}}
 		\label{fig:screenshot0012dgrid}
 	\end{figure}
 	\begin{figure}[h!]
 		\centering
-		\includegraphics[width=0.8\linewidth]{Images/screenshot001_2dGrid2}
+		\includegraphics[width=1\linewidth]{Images/screenshot001_2dGrid2}
 		\caption[Coarse grid influence map.]{Coarse grid \ac{IM}. With this map, large cells are placed on the map without taking into account whether the cell goes over the wall or not. This is good if you have open areas and few narrow passages. \citep{gameDevInfluenceMap} \citep{imPathfinding}}
 		\label{fig:screenshot0012dgrid2}
 	\end{figure}
 	
 	\newpage
 	\subsubsection{Area Graph}
+	Area and waypoint graphs solve the limitations of 2D grids like in chapter \ref{2dgrid}. For example the problem of the big one that it consumes a lot of memory. Area graphs can also be used in 3D environments, for example spread over several floors. Although they bring benefits over grids, they may lack on precision where detail is needed for the decision making. \citep{gameDevInfluenceMap} \citep{imPathfinding}
 	
 	\begin{figure}[h!]
 		\centering
-		\includegraphics[width=0.8\linewidth]{Images/screenshot001_aregraph1}
+		\includegraphics[width=1\linewidth]{Images/screenshot001_aregraph1}
 		\caption[Area graph influence map.]{Area graph influence map. \citep{gameDevInfluenceMap} \citep{imPathfinding}}
 		\label{fig:screenshot001aregraph1}
 	\end{figure}
 	
 	\begin{figure}[h!]
 		\centering
-		\includegraphics[width=0.8\linewidth]{Images/screenshot001_aregraph2}
+		\includegraphics[width=1\linewidth]{Images/screenshot001_aregraph2}
 		\caption[Waypoint network influence map.]{Waypoint network influence map. \citep{gameDevInfluenceMap} \citep{imPathfinding}}
 		\label{fig:screenshot001aregraph2}
 	\end{figure}
@@ -266,8 +267,8 @@ During his studies, Mr Akdogan always wondered how the game AI shares its knowle
 		\end{equation}
 		$I_{h}$ stands for the highest or lowest influence value that exists on the IM. If $I_{xy}$ is greater than or equal to $0$, the highest value is taken and if $I_{xy}$ is less than $0$, the lowest value is taken. $m$ is the value for the momentum. 
 		
-		\item[$\bullet$ Decay] Decay is for the decay of the influence value within an \ac{IM} so a kind of fading memory is built up and the influence continues to decrease depending on how far it is from its point of origin.
-		\item[$\bullet$ Update Frequency] This parameter describes how often the influence is updated. 
+		\item[$\bullet$ Decay] Momentum shows the strength of the scalar influence field. For larger cards, you tend to go for a lower decay value so that the influence can spread much further \citep{imPathfinding}.  Decay is for the decay of the influence value within an \ac{IM} so a kind of fading memory is built up and the influence continues to decrease depending on how far it is from its point of origin.
+		\item[$\bullet$ Update Frequency] The Update Frequency is based on how many resources should be used to update the map. For example, for high-level stategic \ac{AI}, an update rate that takes more than one second (1Hz) is more likely to be chosen.For tactical \ac{AI} that is more micromanagement oriented and needs to make decisions quickly, an update rate faster than one second is chosen (for example 5Hz). This allows the AI to react better to sudden changes. \citep{gameDevInfluenceMap} \citep{imPathfinding}
 		\end {description}
 		
 		\section{Blur } \label{ssec:num1}

@@ -134,19 +134,19 @@
 	% TODO Write about about what it is this thesis
 	
 	\section{Motivation}
-During his studies, Mr Akdogan always wondered how the game AI shares its knowledge. Because if the \ac{AI} always knows everything, it would not be beneficial for the player and you want to give the player a good experience. While looking for a topic for his bachelor thesis, he came across a \ac{GDC} video from \citep{knowledgeReprentation} that talks about the representation of information and also about influence maps for the \ac{AI}. This raised the question of how much influence \ac{SK} has among \ac{AI} as opposed to agents not sharing their knowledge with each other.
+	During his studies, Mr Akdogan always wondered how the game AI shares its knowledge. Because if the \ac{AI} always knows everything, it would not be beneficial for the player and you want to give the player a good experience. While looking for a topic for his bachelor thesis, he came across a \ac{GDC} video from \citep{knowledgeReprentation} that talks about the representation of information and also about influence maps for the \ac{AI}. This raised the question of how much influence \ac{SK} has among \ac{AI} as opposed to agents not sharing their knowledge with each other.
 	
 	\section{Scientific question}
 	How big is the difference between the \ac{AI} agents when they share their influence map or each agent uses its own influence map? 
 	\section{Structure of the Thesis}
-	% TODO
+	The thesis shows in chapter \ref{relatedwork} which of the papers were most important for the preparation of the thesis. Chapter \ref{theoreticalbackground} deals with the basic explanation of the influence map and how it can be constructed. Chapter \ref{experimentalsetup} explains the experimental design and chapter \ref{results} presents the results, which are summarised in chapter \ref{discussion}.
 	
-	\chapter{Related work}
+	\chapter{Related work} \label{relatedwork}
 	In \cite{10.5555/2821138} article discussed how \ac{IM} works in general. As well as the important part of giving an agent or squad a memory of the current influence range on the map.\newline \newline
 	The article \citep{gameDevInfluenceMap} discusses how \ac{IM} is implemented in the industry. Just like how an \ac{IM} behaves on maps with narrow aisles and few open areas. \newline \newline
 	The possible modular structure was explained by Dave mark in the article \citep{gameAIPro} as well as a possible implementation. It was also explained where the possible power lies in \ac{IM}. This was also discussed in Chapter \ref{usage}. 
 	
-	\chapter{Theoretical background}
+	\chapter{Theoretical background} \label{theoreticalbackground}
 	
 	\section{Tactical Game AI}
 	In \ac{RTS} games, for example, there are many tasks for the \ac{AI} on a tactical and strategic level. Tasks are completed for one or more agents to simulate tactical behaviour. With such an interface, \ac{AI} planners can be generated and high-level battle plans can be created. These will then be executed by the tactical \ac{AI} in the micromanagement system. \citep{tacticalGameAi} \newline
@@ -347,7 +347,7 @@ During his studies, Mr Akdogan always wondered how the game AI shares its knowle
 		\section{Waypoints} \label{waypoint}
 		Waypoints are positions distributed around the game world. With waypoints, the \ac{AI} can use this for its pathfinder in order to progress in the game world. Tactical waypoints require more data describing these points in order to make a correct decision about which waypoint to use \citep{AIforGamesTactical}.
 		
-		\chapter{Experimental setup}
+		\chapter{Experimental setup} \label{experimentalsetup}
 		The expirement consists of a map on which two teams compete against each other. This will be similar to the game mode "Conquest" from Battlefield 1 \citep{battlefield1modes}. In Conquest, there are a certain number of places that a team tries to capture. At the beginning, each place is still uncaptured. When a team has taken a place, it always gets points added to their points account at certain time intervals. The team that has reached a certain number of points first after a certain time has won. 
 		One side will consist of a squad of five agents, the other side of five squads of one agent each. A squad always knows where its agents are and whether a unit sees a friendly or enemy agent and can thus build up an \ac{IM}.
 		When a team has won, information about the match is saved for later evaluation and the next match starts. This allows you to run this several thousand times so that the result is not falsified.
@@ -386,7 +386,7 @@ During his studies, Mr Akdogan always wondered how the game AI shares its knowle
 		So that not every match runs the same, a random factor had to be added. Therefore the instantiation was chosen where an agent is placed when he died or when the match started. An agent then gets a random ball selected that is not in a capturable location. The randomization is done by the Unity3D engine random range function \citep{technologiesUnityRandomRange}. If you always play a round with the same spawn locations you will always get a deterministic result and the agents will make the same decisions.
 		
 		\clearpage
-		\chapter{Results}
+		\chapter{Results} \label{results}
 		The shared team means that a squad of 5 agents share an \ac{IM}. For the Unshared Team, it is 5 squads with one agent each. So each squad has its own \ac{IM} and does not know what the \ac{IM} of the other squad looks like from the team. 
 		\section{Open map}
 		\subsection{Shared vs Unshared}
@@ -470,9 +470,12 @@ During his studies, Mr Akdogan always wondered how the game AI shares its knowle
 			In the run of Unshared vs Unshared on the closed map as seen here in Figure \ref{fig:close-map}, the blue Unshared team won $94.0\%$ of $100$ runs. The orange team with the Unshared \ac{IM} won $6.0\%$.
 		
 		
-		\chapter{Discussion}
+		\chapter{Discussion} \label{discussion}
 		As in Chapter \ref{assumption}, the assumption was that the team with the \ac{SK} from the \ac{IM} has a higher win rate than the team in which each agent has its own \ac{IM}. \newline
 		What is immediately noticeable is that team 1 always wins in the 8 times 100 iterations, regardless of whether it is equipped with \ac{SK} or unshared knowledge. This can come from the fact that team 1 is the first in the calculation of the \ac{IM} from the sequential flow in the code. This could be one of the possibilities, but to confirm this would require running several 100 iteration packages of the respective team setup.
+		
+		\section{Upcoming questions}
+		One of the questions that arises is why did team 1 always win? Furthermore, it may also be possible that the high-level \ac{AI} has too small a set of strategies to choose from. Since decisions should only be made based on the influence map, this may be too little. 
 		
 		\chapter{Conclusion}
 		

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2020.12.16)  16 AUG 2021 12:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2020.12.16)  17 AUG 2021 11:37
 entering extended mode
 **./template_Article.tex
 (template_Article.tex
@@ -473,13 +473,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 216--217
  []
 
 [7]
-<Images/screenshot001_2dGrid.png, id=364, 481.8pt x 271.0125pt>
+<Images/screenshot001_2dGrid.png, id=374, 481.8pt x 271.0125pt>
 File: Images/screenshot001_2dGrid.png Graphic file (type png)
 <use Images/screenshot001_2dGrid.png>
 Package pdftex.def Info: Images/screenshot001_2dGrid.png  used on input line 22
 3.
 (pdftex.def)             Requested size: 345.0pt x 194.06606pt.
-<Images/screenshot001_2dGrid2.png, id=377, 481.8pt x 271.0125pt>
+<Images/screenshot001_2dGrid2.png, id=387, 481.8pt x 271.0125pt>
 File: Images/screenshot001_2dGrid2.png Graphic file (type png)
 <use Images/screenshot001_2dGrid2.png>
 Package pdftex.def Info: Images/screenshot001_2dGrid2.png  used on input line 2
@@ -490,7 +490,7 @@ Package pdftex.def Info: Images/screenshot001_2dGrid2.png  used on input line 2
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [8 <./Images/screenshot001_2dGrid.png (PNG copy)>]
-<Images/screenshot001_aregraph1.png, id=398, 481.8pt x 271.0125pt>
+<Images/screenshot001_aregraph1.png, id=408, 481.8pt x 271.0125pt>
 File: Images/screenshot001_aregraph1.png Graphic file (type png)
 <use Images/screenshot001_aregraph1.png>
 Package pdftex.def Info: Images/screenshot001_aregraph1.png  used on input line
@@ -500,7 +500,7 @@ Package pdftex.def Info: Images/screenshot001_aregraph1.png  used on input line
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Images/screenshot001_aregraph2.png, id=403, 481.8pt x 271.0125pt>
+<Images/screenshot001_aregraph2.png, id=413, 481.8pt x 271.0125pt>
 File: Images/screenshot001_aregraph2.png Graphic file (type png)
 <use Images/screenshot001_aregraph2.png>
 Package pdftex.def Info: Images/screenshot001_aregraph2.png  used on input line
@@ -516,13 +516,13 @@ Chapter 4.
 [14
 
 ]
-<Images/open map.png, id=478, 715.92468pt x 423.08063pt>
+<Images/open map.png, id=488, 715.92468pt x 423.08063pt>
 File: Images/open map.png Graphic file (type png)
 <use Images/open map.png>
 Package pdftex.def Info: Images/open map.png  used on input line 371.
 (pdftex.def)             Requested size: 345.0pt x 203.88335pt.
  [15 <./Images/open map.png>]
-<Images/closemap.png, id=486, 716.6775pt x 424.58624pt>
+<Images/closemap.png, id=496, 716.6775pt x 424.58624pt>
 File: Images/closemap.png Graphic file (type png)
 <use Images/closemap.png>
 Package pdftex.def Info: Images/closemap.png  used on input line 380.
@@ -531,7 +531,7 @@ Package pdftex.def Info: Images/closemap.png  used on input line 380.
 
  <./Images/closemap.png>]
 Chapter 5.
-<Images/100 Games Shared vs Unshared Open Map.png, id=500, 628.3475pt x 581.171
+<Images/100 Games Shared vs Unshared Open Map.png, id=510, 628.3475pt x 581.171
 25pt>
 File: Images/100 Games Shared vs Unshared Open Map.png Graphic file (type png)
 <use Images/100 Games Shared vs Unshared Open Map.png>
@@ -545,7 +545,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 ] [18 <./Images/100 Games Shared vs Unshared Open Map.png>]
-<Images/100 Games Unshared vs Shared Open Map.png, id=513, 584.1825pt x 581.171
+<Images/100 Games Unshared vs Shared Open Map.png, id=523, 584.1825pt x 581.171
 25pt>
 File: Images/100 Games Unshared vs Shared Open Map.png Graphic file (type png)
 <use Images/100 Games Unshared vs Shared Open Map.png>
@@ -555,7 +555,7 @@ Package pdftex.def Info: Images/100 Games Unshared vs Shared Open Map.png  used
  [19
 
  <./Images/100 Games Unshared vs Shared Open Map.png>]
-<Images/100 Games Shared vs Shared Open Map.png, id=522, 600.2425pt x 581.17125
+<Images/100 Games Shared vs Shared Open Map.png, id=532, 600.2425pt x 581.17125
 pt>
 File: Images/100 Games Shared vs Shared Open Map.png Graphic file (type png)
 <use Images/100 Games Shared vs Shared Open Map.png>
@@ -565,7 +565,7 @@ n input line 415.
  [20
 
  <./Images/100 Games Shared vs Shared Open Map.png>]
-<Images/100 Games Unshared vs Unshared Open Map.png, id=531, 625.33624pt x 581.
+<Images/100 Games Unshared vs Unshared Open Map.png, id=541, 625.33624pt x 581.
 17125pt>
 File: Images/100 Games Unshared vs Unshared Open Map.png Graphic file (type png
 )
@@ -576,7 +576,7 @@ ed on input line 425.
  [21
 
  <./Images/100 Games Unshared vs Unshared Open Map.png>]
-<Images/100 Games Shared vs Unshared Close Map.png, id=540, 618.31pt x 581.1712
+<Images/100 Games Shared vs Unshared Close Map.png, id=550, 618.31pt x 581.1712
 5pt>
 File: Images/100 Games Shared vs Unshared Close Map.png Graphic file (type png)
 
@@ -588,7 +588,7 @@ d on input line 436.
 [22
 
  <./Images/100 Games Shared vs Unshared Close Map.png>]
-<Images/100 Games Unshared vs Shared Close Map.png, id=550, 559.08875pt x 581.1
+<Images/100 Games Unshared vs Shared Close Map.png, id=560, 559.08875pt x 581.1
 7125pt>
 File: Images/100 Games Unshared vs Shared Close Map.png Graphic file (type png)
 
@@ -599,7 +599,7 @@ d on input line 446.
  [23
 
  <./Images/100 Games Unshared vs Shared Close Map.png>]
-<Images/100 Games Shared vs Shared Close Map.png, id=559, 610.28pt x 581.17125p
+<Images/100 Games Shared vs Shared Close Map.png, id=569, 610.28pt x 581.17125p
 t>
 File: Images/100 Games Shared vs Shared Close Map.png Graphic file (type png)
 <use Images/100 Games Shared vs Shared Close Map.png>
@@ -609,7 +609,7 @@ on input line 456.
  [24
 
  <./Images/100 Games Shared vs Shared Close Map.png>]
-<Images/100 Games Unshared vs Unshared Close Map.png, id=568, 559.08875pt x 581
+<Images/100 Games Unshared vs Unshared Close Map.png, id=578, 559.08875pt x 581
 .17125pt>
 File: Images/100 Games Unshared vs Unshared Close Map.png Graphic file (type pn
 g)
@@ -665,13 +665,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--23
 
 ] (template_Article.aux)
 Package rerunfilecheck Info: File `template_Article.out' has not changed.
-(rerunfilecheck)             Checksum: 75C20A3ADC9DE1CD1C38543B306D29A0;2802.
+(rerunfilecheck)             Checksum: 4555F1F87EC2B58409E309FAE2A1DC91;2867.
  ) 
 Here is how much of TeX's memory you used:
- 7838 strings out of 479697
- 120917 string characters out of 2867132
- 439816 words of memory out of 3000000
- 24635 multiletter control sequences out of 15000+200000
+ 7845 strings out of 479697
+ 121017 string characters out of 2867132
+ 440006 words of memory out of 3000000
+ 24641 multiletter control sequences out of 15000+200000
  409308 words of font info for 49 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  66i,8n,72p,897b,461s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -691,9 +691,9 @@ C:/Users/fredd/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr
 msfonts/cm/cmsy10.pfb><C:/Users/fredd/AppData/Local/Programs/MiKTeX/fonts/type1
 /public/amsfonts/cm/cmti10.pfb><C:/Users/fredd/AppData/Local/Programs/MiKTeX/fo
 nts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on template_Article.pdf (34 pages, 4010494 bytes).
+Output written on template_Article.pdf (34 pages, 4012672 bytes).
 PDF statistics:
- 737 PDF objects out of 1000 (max. 8388607)
- 130 named destinations out of 1000 (max. 500000)
- 415 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 748 PDF objects out of 1000 (max. 8388607)
+ 131 named destinations out of 1000 (max. 500000)
+ 423 words of extra memory for PDF output out of 10000 (max. 10000000)
 

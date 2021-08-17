@@ -39,5 +39,6 @@
 \contentsline {subsection}{\numberline {5.2.3}Shared vs Shared}{24}{subsection.5.2.3}%
 \contentsline {subsection}{\numberline {5.2.4}Unshared vs Unshared}{25}{subsection.5.2.4}%
 \contentsline {chapter}{\numberline {6}Discussion}{26}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Upcoming questions}{26}{section.6.1}%
 \contentsline {chapter}{\numberline {7}Conclusion}{27}{chapter.7}%
 \contentsline {chapter}{\numberline {8}Lists}{28}{chapter.8}%

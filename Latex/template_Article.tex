@@ -100,9 +100,29 @@
 	\end{titlepage}
 	
 	
-	\begin{abstract}
-		
-	\end{abstract}
+\renewcommand\abstractname{Zusammenfassung}     % Umbenennung der Überschrift für die abstract-Umgebenung
+
+\begin{abstract}
+	Das Ziel dieser Forschung ist es zu bestimmen ob eine Taktische Game AI mit geteiltem wissen bassierend auf Einflusskarten agiert gegen eine AI deren Agenten alle eine eigene Einflusskarte generieren. Dazu wird die folgende Forschungsfrage gestellt: "Wie groß it der unterschied zwischen der AI deren agenten ihre Einflusskarte teilen oder wenn jeder Agent seine eigene Einflusskarte verwendet?". \\
+	
+	Um die Forschungsfrage zu beantworten, wurde auf zwei verschiedenen Karten, in jeweils 100 Iterationen in jeder Konstellation die AI gegen einander anzutreten. \\
+	
+	Der Versuch hat gezeigt, dass man mit nur einer Einflusskarte kein genaues Ergebnis hervorrufen kann. Zu $50\%$ gewann die AI mit den Agenten die ihre Einflusskarte teilt und zu $50\%$ die andere. \\
+	
+	Es wird viel mehr benötigt wie verschiedene Strategien, Balancing sowie mehr Möglichkeiten zu geben um auf verschiedene Situationen zu reagieren.
+\end{abstract}
+
+\renewcommand\abstractname{Abstract}            % Umbenennung der Überschrift für die abstract-Umgebenung
+
+\begin{abstract}
+	The aim of this research is to determine whether a Tactical Game AI with shared knowledge based on influence cards will act against an AI whose agents all generate their own influence card. The research question is: "How big is the difference between the AI whose agents share their influence map or when each agent uses its own influence map? \\
+	
+	To answer the research question, the AIs were pitted against each other on two different maps, in 100 iterations in each constellation. \\
+	
+	The experiment showed that you cannot produce an accurate result with just one influence map. The AI with the agents sharing its influence card won $50\%$ of the time and the other $50\%$ of the time. \\
+	
+	Much more is needed, such as different strategies, balancing and more possibilities to react to different situations. 
+\end{abstract}
 	
 	\newpage
 	\chapter*{Honorary Declaration}
@@ -131,15 +151,24 @@
 	\tableofcontents
 
 	\chapter{Introduction}
-	% TODO Write about about what it is this thesis
+	\ac{IM} is popular in games \ac{AI} and is a very powerful tool and is no longer a rarity in the industry.
 	
 	\section{Motivation}
-	During his studies, Mr Akdogan always wondered how the game AI shares its knowledge. Because if the \ac{AI} always knows everything, it would not be beneficial for the player and you want to give the player a good experience. While looking for a topic for his bachelor thesis, he came across a \ac{GDC} video from \citep{knowledgeReprentation} that talks about the representation of information and also about influence maps for the \ac{AI}. This raised the question of how much influence \ac{SK} has among \ac{AI} as opposed to agents not sharing their knowledge with each other.
+	The structure of an \ac{IM} and the possible uses as explained in the pathfinding in Chapter \ref{pathfinding} as well as the positioning of the agents have already been explored \citep{imPathfinding}. High-level \ac{AI}s that use them for strategy finding or low-level \ac{AI}s for micromanagement have also been researched, as can be read in Chapter \ref{tacticalGameAi} \citep{AIforGamesTactical} \citep{gameAIPro} \citep{gameDevInfluenceMap}. But how an \ac{AI} behaves when its agents share an \ac{IM} or each agent builds its own \ac{IM} is still largely unexplored.
 	
-	\section{Scientific question}
-	How big is the difference between the \ac{AI} agents when they share their influence map or each agent uses its own influence map? 
+	\section{Scientific question} \label{scientificquestion}
+	In this research, the question of how an \ac{AI} with a shared IM performs against an \ac{AI} which builds an \ac{IM} for each agent is explored. 
+
+	\section{Aim of the research work} \label{aimoftheresearchwork}
+	The aim of this research is to find out if it makes a big difference if the \ac{AI} shares an \ac{IM} or not, and thus to find out possible suggestions for improvement and to find possible problems.
+	
+	\section{The research method}
+	Quantitative rounds are played in different constellations of \ac{AI}. These are the same in all respects except how the \ac{IM} is used. This is also performed on different maps in order to get a quantitative result based on the changed environment. 
+
 	\section{Structure of the Thesis}
-	The thesis shows in chapter \ref{relatedwork} which of the papers were most important for the preparation of the thesis. Chapter \ref{theoreticalbackground} deals with the basic explanation of the influence map and how it can be constructed. Chapter \ref{experimentalsetup} explains the experimental design and chapter \ref{results} presents the results, which are summarised in chapter \ref{discussion}.
+	In the course of this scientific work, it will be examined how different approaches to \ac{IM} influence behaviour. Theoretical terms such as "Tactical Game AI" and "Influence Map" are explained first. After that, the use of \ac{IM} will be discussed. Furthermore, the part on "Dealing with unknowns" from chapter \ref{ssec:dwu} is added, as this is an important point for the memory of the \ac{AI}. Then it is about how an IM is constructed and how a blur is used. Then the structure of the expirement is explained. \\
+	
+	Finally, the results are summarised and a final conclusion is drawn, including suggestions for improvement. 
 	
 	\chapter{Related work} \label{relatedwork}
 	In \cite{10.5555/2821138} article discussed how \ac{IM} works in general. As well as the important part of giving an agent or squad a memory of the current influence range on the map.\newline \newline
@@ -148,23 +177,23 @@
 	
 	\chapter{Theoretical background} \label{theoreticalbackground}
 	
-	\section{Tactical Game AI}
+	\section{Tactical Game AI} \label{tacticalGameAi}
 	In \ac{RTS} games, for example, there are many tasks for the \ac{AI} on a tactical and strategic level. Tasks are completed for one or more agents to simulate tactical behaviour. With such an interface, \ac{AI} planners can be generated and high-level battle plans can be created. These will then be executed by the tactical \ac{AI} in the micromanagement system. \citep{tacticalGameAi} \newline
 	
 	
 	\section{Influence Map}
-	All information is taken from the book \ac{AI} for Games unless otherwise cited in this chapter \citep{AIforGamesTactical}.
-	\newline
+	All information is taken from the book \ac{AI} for Games unless otherwise cited in this chapter \citep{AIforGamesTactical}.	\newline
+
+	With an \ac{IM}, the current distribution of a team's military strength can be mapped to any position on the map. In this way, different additive events can also be mapped. Many factors can affect military influence, such as the proximity of a unit, the proximity of a base, the length of time a unit has been last seen, the terrain, the current weather, the strength of a unit. Many factors have only a small influence. Based on how the abstract image is drawn across the map or level of influence, more marginal information can be communicated to the \ac{AI} and tactical decisions can be made.
 	
-	An \ac{IM} is used to record the current balance of Military Influence at each position in a level. Many factors can affect military influence, such as the proximity of a unit, the proximity of a base, the length of time a unit has been last seen, the terrain, the current weather, the strength of a unit. Many factors have only a small influence. Based on how the abstract image is drawn across the map or level of influence, more marginal information can be communicated to the \ac{AI} and tactical decisions can be made.
-	
+	\newpage
 	\subsection{Usage} \label{usage}
 	With \ac{IM}, one can arrange a collection and storage of map data so in usable forms. This information can then be further processed into three general categories \citep{gameAIPro}:
 	
 	\begin{enumerate}
-		\item Gathering information about our location and the area around us
-		\item Targeting locations
-		\item Movement destinations
+		\item Gathering information about our location and the area around us \citep{gameAIPro}
+		\item Targeting locations \citep{gameAIPro}
+		\item Movement destinations \citep{gameAIPro}
 	\end{enumerate}
 	
 	\subsubsection{Information}
@@ -172,12 +201,13 @@
 	For example, to find out where the current danger from the enemies is from the position on which the agent is standing. This is then calculated with the influence value of the enemy influence and tells how high the threat is \citep{gameAIPro}. 
 	
 	\subsubsection{Targeting}
-	One of the other uses of \ac{IM} is for deciding which target to attack. For example, caching the cell in IM with the lowest influence value suggests the location with the most enemy agents. Therefore, depending on how aggressive or passive the agents are, this location can be avoided or moved into focus. \citep{gameAIPro}
+	One of the other uses of \ac{IM} is for deciding which target to attack. For example, caching the cell in \ac{IM} with the lowest influence value suggests the location with the most enemy agents. Therefore, depending on how aggressive or passive the agents are, this location can be avoided or moved into focus. \citep{gameAIPro}
 	
-	\subsubsection{Movement / Positioning}
+	\subsubsection{Movement / Positioning} 
+	\label{pathfinding}
 	\ac{IM} can have a great influence on pathfinding and pathfollowing. The same applies to tactical shooters and the positioning of agents, for which waypoints can be added as in Chapter  \ref{waypoint}.
 	With this, a direction vector can be created with the high point of the highest concentration of influence values of the opponents in order to get the direction of how an agent can flee or retreat. \newline \newline
-	Pathfinding based on \ac{IM} opens new ways to deal with dynamic environments \citep{imPathfinding}. The path generation can react to game-typical properties (for example: line of sight, sound, faction location, etc.) \citep{imPathfinding}. This allows agents to better navigate through the environment. For high-level strategic games, IM displays general objectives for the pathfinder so that they can reach their goal as quickly as possible. For low-level tactical decision-making, in-game events are added to the \ac{IM} (for example: a grenade exploding, shots flying by, sound propagation, etc.) \citep{imPathfinding}. Therefore, paths can always be rescheduled and recalculated based on these events \citep{imPathfinding}. 
+	Pathfinding based on \ac{IM} opens new ways to deal with dynamic environments \citep{imPathfinding}. The path generation can react to game-typical properties (for example: line of sight, sound, faction location, etc.) \citep{imPathfinding}. This allows agents to better navigate through the environment. For  strategic games, IM displays general objectives for the pathfinder so that they can reach their goal as quickly as possible. For low-level tactical decision-making, in-game events are added to the \ac{IM} (for example: a grenade exploding, shots flying by, sound propagation, etc.) \citep{imPathfinding}. Therefore, paths can always be rescheduled and recalculated based on these events \citep{imPathfinding}. 
 	
 	
 	\subsection{Simple Influence} \label{ssec:num2}
@@ -251,7 +281,7 @@
 	
 	\newpage
 	\subsubsection{Properties}
-	After setting the values of each agent in the IM, a blur algorithm is applied as explained in the chapter \ref{ssec:num1}. The choice of which blur method is best suited for each game depends heavily on the game designer. For example, depending on whether there are many walls on the level or more open vials, it can be decided whether to use one of the distance-based blur algorithms described in Chapter \ref{ssec:num2} or a blur algorithm from Chapter \ref{ssec:num1}. The important thing is to only apply this to cells that are accessible. Thus, the influence must propargize around walls and no distorted image is transmitted. The value from the blur algorithm is then multiplied by the decay to implement a decay of the influence on the range. 
+	After setting the values of each agent in the \ac{IM}, a blur algorithm is applied as explained in the chapter \ref{ssec:num1}. The choice of which blur method is best suited for each game depends heavily on the game designer. For example, depending on whether there are many walls on the level or more open vials, it can be decided whether to use one of the distance-based blur algorithms described in Chapter \ref{ssec:num2} or a blur algorithm from Chapter \ref{ssec:num1}. The important thing is to only apply this to cells that are accessible. Thus, the influence must propargize around walls and no distorted image is transmitted. The value from the blur algorithm is then multiplied by the decay to implement a decay of the influence on the range. 
 	
 	\begin{equation}
 		I_{xy} = b_{xy} * D
@@ -261,17 +291,18 @@
 	
 	
 	\begin{description}
-		\item[$\bullet$ Momentum] With momentum the influence is linearly interpolated from the cell. In this way the memory of the IM is suggested.
+		\item[$\bullet$ Momentum] With momentum the influence is linearly interpolated from the cell. In this way the memory of the \ac{IM} is suggested.
 		\begin{equation}
 			I_{xy} = I_{xy} + ((I_{h} - I_{xy}) * m) 
 		\end{equation}
-		$I_{h}$ stands for the highest or lowest influence value that exists on the IM. If $I_{xy}$ is greater than or equal to $0$, the highest value is taken and if $I_{xy}$ is less than $0$, the lowest value is taken. $m$ is the value for the momentum. 
+		$I_{h}$ stands for the highest or lowest influence value that exists on the \ac{IM}. If $I_{xy}$ is greater than or equal to $0$, the highest value is taken and if $I_{xy}$ is less than $0$, the lowest value is taken. $m$ is the value for the momentum. 
 		
 		\item[$\bullet$ Decay] Momentum shows the strength of the scalar influence field. For larger cards, you tend to go for a lower decay value so that the influence can spread much further \citep{imPathfinding}.  Decay is for the decay of the influence value within an \ac{IM} so a kind of fading memory is built up and the influence continues to decrease depending on how far it is from its point of origin.
-		\item[$\bullet$ Update Frequency] The Update Frequency is based on how many resources should be used to update the map. For example, for high-level stategic \ac{AI}, an update rate that takes more than one second (1Hz) is more likely to be chosen.For tactical \ac{AI} that is more micromanagement oriented and needs to make decisions quickly, an update rate faster than one second is chosen (for example 5Hz). This allows the AI to react better to sudden changes. \citep{gameDevInfluenceMap} \citep{imPathfinding}
+		\item[$\bullet$ Update Frequency] The Update Frequency is based on how many resources should be used to update the map. For example, for high-level stategic \ac{AI}, an update rate that takes more than one second (1Hz) is more likely to be chosen. For tactical \ac{AI} that is more micromanagement oriented and needs to make decisions quickly, an update rate faster than one second is chosen (for example 5Hz). This allows the \ac{AI} to react better to sudden changes. \citep{gameDevInfluenceMap} \citep{imPathfinding}
 		\end {description}
 		
-		\section{Blur } \label{ssec:num1}
+		\newpage
+		\section{Blur} \label{ssec:num1}
 		For the calculation of the influence on maps with narrow corridors and small areas a blur algorithm is used \citep{gameDevInfluenceMap}. \newline This suggests that the algorithm is not affected by obstacles. Thus the influence flows around the corners. In this work, a boxblur algorithm was applied. But it would work just as well with a Gaussian blur. This is open to the individual preferences of how the influence should spread. For this work, the boxblur algorithm was chosen because it provides a more uniform distribution in all directions of influence. 
 		
 		\begin{table}[H]
@@ -385,7 +416,6 @@
 		\subsection{Randomness factor} \label{ssec:rf}
 		So that not every match runs the same, a random factor had to be added. Therefore the instantiation was chosen where an agent is placed when he died or when the match started. An agent then gets a random ball selected that is not in a capturable location. The randomization is done by the Unity3D engine random range function \citep{technologiesUnityRandomRange}. If you always play a round with the same spawn locations you will always get a deterministic result and the agents will make the same decisions.
 		
-		\clearpage
 		\chapter{Results} \label{results}
 		The shared team means that a squad of 5 agents share an \ac{IM}. For the Unshared Team, it is 5 squads with one agent each. So each squad has its own \ac{IM} and does not know what the \ac{IM} of the other squad looks like from the team. 
 		\section{Open map}
@@ -396,7 +426,7 @@
 			\caption[Shared vs Unshared - Open Map]{Shared vs Unshared - Open Map}
 			\label{fig:100-games-shared-vs-unshared-open-map}
 		\end{figure}
-	In the run of Shared vs Unshared on the open map as seen here in Figure \ref{fig:open-map}, the Shared team won $53.0\%$ of $100$ runs. The team with the Unshared \ac{IM} won $47.0\%$.
+	In the run of Shared vs Unshared on the open map as seen here in Figure \ref{fig:open-map}, the Shared team won $53.0\%$ of $100$ runs. The team with the Unshared \ac{IM} won $47.0\%$. The team with the shared influence card held the three points for an average of $414.4309201049805$ seconds. The team with the unshared influence card held the three points for an average of $412.08373779296875$ seconds.
 		
 		\clearpage
 		\subsection{Unshared vs Shared}
@@ -406,7 +436,7 @@
 			\caption[Unshared vs Shared - Open Map]{Unshared vs Shared - Open Map}
 			\label{fig:100-games-unshared-vs-shared-open-map}
 		\end{figure}
-		In the run of Unshared vs Shared on the open map as seen here in Figure \ref{fig:open-map}, the Shared team won $36.0\%$ of $100$ runs. The team with the Unshared \ac{IM} won $64.0\%$. Shared and the Unshared team switched sides to see if it made a difference. 
+		In the run of Unshared vs Shared on the open map as seen here in Figure \ref{fig:open-map}, the Shared team won $36.0\%$ of $100$ runs. The team with the Unshared \ac{IM} won $64.0\%$. Shared and the Unshared team switched sides to see if it made a difference. The team with the shared influence card held the three points for an average of $450.8907879638672$ seconds. The team with the unshared influence card held the three points for an average of $378.2070457458496$ seconds.
 		
 		\clearpage
 		\subsection{Shared vs Shared}
@@ -437,7 +467,9 @@
 			\caption[Shared vs Unshared - Closed Map]{Shared vs Unshared - Closed Map}
 			\label{fig:100-games-shared-vs-unshared-close-map}
 		\end{figure}
-		In the run of Shared vs Unshared on the closed map as seen here in Figure \ref{fig:close-map}, the Shared team won $57.0\%$ of $100$ runs. The team with the Unshared \ac{IM} won $43.0\%$.
+		In the run of Shared vs Unshared on the closed map as seen here in Figure \ref{fig:close-map}, the Shared team won $57.0\%$ of $100$ runs. The team with the Unshared \ac{IM} won $43.0\%$. The team with the shared influence card held the three points for an average of $416.90047943115235$ seconds.
+		The team with the unshared influence card held the three points for an average of $401.9303968811035$ seconds.
+		
 		
 		\clearpage
 		\subsection{Unshared vs Shared}
@@ -447,7 +479,9 @@
 			\caption[Unshared vs Shared - Closed Map]{Unshared vs Shared - Closed Map}
 			\label{fig:100-games-unshared-vs-shared-close-map}
 		\end{figure}
-	In the run of Unshared vs Shared on the closed map as seen here in Figure \ref{fig:close-map}, the Shared team won $73.0\%$ of $100$ runs. The team with the Unshared \ac{IM} won $27.0\%$.
+	In the run of Unshared vs Shared on the closed map as seen here in Figure \ref{fig:close-map}, the Shared team won $73.0\%$ of $100$ runs. The team with the Unshared \ac{IM} won $27.0\%$. The team with the shared influence card held the three points for an average of $453.7474871826172$ seconds.
+	The team with the unshared influence card held the three points for an average of $377.55202514648437$ seconds.
+	
 		
 		\clearpage
 		\subsection{Shared vs Shared}
@@ -471,14 +505,19 @@
 		
 		
 		\chapter{Discussion} \label{discussion}
-		As in Chapter \ref{assumption}, the assumption was that the team with the \ac{SK} from the \ac{IM} has a higher win rate than the team in which each agent has its own \ac{IM}. \newline
-		What is immediately noticeable is that team 1 always wins in the 8 times 100 iterations, regardless of whether it is equipped with \ac{SK} or unshared knowledge. This can come from the fact that team 1 is the first in the calculation of the \ac{IM} from the sequential flow in the code. This could be one of the possibilities, but to confirm this would require running several 100 iteration packages of the respective team setup.
+		The expectations were, as written in chapter \ref{assumption}, that the team with the \ac{SK} \ac{AI} would be more likely to win than the team that generates a separate \ac{IM} for each agent. This did not happen as expected. What is immediately noticeable is that the team listed as team 1 always wins. No matter if it is the team with \ac{SK} or undivided knowledge of the \ac{IM}. This may be because the \ac{IM} of team 1 and all other actions in the code before team 2 are calculated seqeuntially and do not run in an asynchronous thread. This could be one of the possible probabilities that this happened. To confirm this, one would have to run more quantitative tests with 100 or more matches each to see if it was just a coincidence or not. 
 		
 		\section{Upcoming questions}
-		One of the questions that arises is why did team 1 always win? Furthermore, it may also be possible that the high-level \ac{AI} has too small a set of strategies to choose from. Since decisions should only be made based on the influence map, this may be too little. 
+		One of the questions that comes up is why team 1 always wins, even when the same \ac{AI} competes against itself. Furthermore, there is the question of whether the pool of possible strategies was too small for the high-level \ac{AI} to choose from and therefore there are too few variations to deal with different situations. The same is true for the lower-level \ac{AI}, which may have too few additive influence events, such as including the flying of projectiles and additively changing the influence where a projectile was. 
 		
 		\chapter{Conclusion}
+		Using \ac{IM} for the high-level \ac{AI} to choose appropriate strategies or for the low-level \ac{AI} to help micromanage and react quickly to new circumstances is definitely very helpful. \ac{IM} is also a very powerful tool for pathfollowing and pathfinding. \\
 		
+		To address the scientific question from chapter \ref{scientificquestion} and the aim of this research from chapter \ref{aimoftheresearchwork}, in this thesis there is no significant difference whether the \ac{AI} shares an \ac{IM} or whether each agent has its own. \\
+		
+		Using \ac{IM} is generally a very helpful tool for decision-making. But the strategy pool for the \ac{AI} to decide on should be much bigger and it needs a lot of balancing. In an \ac{RTS} or other real time games, it would be advantageous to have strategies like falling back, flanking, reformatting with the other agents from the squad, moving forward into cover and much more. This can be optimally linked with pathfinding from chapter \ref{pathfinding} and the waypoints from chapter \ref{waypoint}, as well as \ac{GOAP}, \ac{FSM} or a behaviour tree. \\
+		
+		\ac{IM} are only aids to decision making and cannot make decisions themselves. They only provide abstract data on the playing field and a kind of memory. In theory, it is better if the \ac{AI} shares an \ac{IM}, because that way the high-level \ac{AI} can see a better abstract picture of the playing field and thus choose better strategies. Likewise, the low-level \ac{AI} could then react better to possible situations and call up appropriate behaviour. This is also much more performant than generating a separate map for each agent on the field. This could then also be calculated in compute shaders to get more performance and to calculate those simple blur algorithms from chapter \ref{ssec:num1}. Furthermore, more information like waypoints from chapter \ref{waypoint} and multiple layers could be added to an \ac{IM} to get more accurate information as described in Dave Mark's work \citep{gameAIPro}. 
 		
 		\newpage
 		\chapter{Lists}
@@ -490,6 +529,8 @@
 			\acro{GDC}{game developers conference}
 			\acro{SK}{shared knowledge}
 			\acro{RTS}{Real Time Strategy}
+			\acro{GOAP}{goal oriented action planning}
+			\acro{FSM}{finite state machine}
 		\end{acronym}
 		
 		\listoffigures

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2020.12.16)  17 AUG 2021 11:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2020.12.16)  27 AUG 2021 17:21
 entering extended mode
 **./template_Article.tex
 (template_Article.tex
@@ -376,26 +376,70 @@ LaTeX Info: Redefining \nameref on input line 25.
 
  [1
 
-{C:/Users/fredd/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]pdfTeX warning (
-ext4): destination with the same identifier (name{page.1}) has been already use
-d, duplicate ignored
-<to be read again> 
-                   \relax 
-l.105 	\end{abstract}
-                      [1]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 123
-.
+{C:/Users/fredd/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
 
+ []
+
+
+Overfull \hbox (7.08383pt too wide) in paragraph at lines 108--109
+[]\OT1/cmr/m/n/10 Um die Forschungs-frage zu beant-worten, wurde auf zwei ver-s
+chiede-nen Karten,
+ []
+
+
+Overfull \hbox (2.44392pt too wide) in paragraph at lines 108--109
+\OT1/cmr/m/n/10 in jew-eils 100 It-er-a-tio-nen in jeder Kon-stel-la-tion die A
+I gegen einan-der anzutreten. 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--109
+
+ []
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 110
+.
 (C:\Users\fredd\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 123
+LaTeX Font Info:    Trying to load font information for U+msb on input line 110
 .
 
 (C:\Users\fredd\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (40.35pt too wide) in paragraph at lines 123--127
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.113 \end{abstract}
+                     [1]
+Underfull \hbox (badness 10000) in paragraph at lines 118--119
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--121
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--123
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.125 \end{abstract}
+                     [1]
+Overfull \hbox (40.35pt too wide) in paragraph at lines 143--147
 [] 
  []
 
@@ -403,14 +447,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.127 	\newpage
+l.147 	\newpage
                 [1
 
 ] (template_Article.tocpdfTeX warning (ext4): destination with the same identif
 ier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.32 ...}Shared vs Unshared}{17}{subsection.5.1.1}
+l.32 ...er}{\numberline {5}Results}{19}{chapter.5}
                                                   % [1
 
 ])
@@ -419,231 +463,245 @@ l.32 ...}Shared vs Unshared}{17}{subsection.5.1.1}
 
  [2]
 Chapter 1.
+Package acronym Info: Label `acro:IM' newly defined as it shall be overridden
+although it is yet undefined on input line 154.
 Package acronym Info: Label `acro:AI' newly defined as it shall be overridden
-although it is yet undefined on input line 137.
-Package acronym Info: Label `acro:GDC' newly defined as it shall be overridden
-although it is yet undefined on input line 137.
-Package acronym Info: Label `acro:SK' newly defined as it shall be overridden
-although it is yet undefined on input line 137.
+although it is yet undefined on input line 154.
 [3
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 169--170
+
+ []
+
+[4]
 Chapter 2.
-Package acronym Info: Label `acro:IM' newly defined as it shall be overridden
-although it is yet undefined on input line 145.
 
-Underfull \hbox (badness 10000) in paragraph at lines 145--148
+Underfull \hbox (badness 10000) in paragraph at lines 174--177
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 145--148
-
- []
-
-[4
-
-]
-Chapter 3.
-Package acronym Info: Label `acro:RTS' newly defined as it shall be overridden
-although it is yet undefined on input line 152.
-
-Underfull \hbox (badness 10000) in paragraph at lines 152--153
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 156--158
+Underfull \hbox (badness 10000) in paragraph at lines 174--177
 
  []
 
 [5
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 178--181
+Chapter 3.
+Package acronym Info: Label `acro:RTS' newly defined as it shall be overridden
+although it is yet undefined on input line 181.
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
 
  []
 
-[6]
-Package acronym Info: Label `acro:FOW' newly defined as it shall be overridden
-although it is yet undefined on input line 213.
 
-Underfull \hbox (badness 10000) in paragraph at lines 216--217
+Underfull \hbox (badness 10000) in paragraph at lines 185--186
+
+ []
+
+[6
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 208--211
 
  []
 
 [7]
-<Images/screenshot001_2dGrid.png, id=374, 481.8pt x 271.0125pt>
+Package acronym Info: Label `acro:FOW' newly defined as it shall be overridden
+although it is yet undefined on input line 243.
+Package acronym Info: Label `acro:SK' newly defined as it shall be overridden
+although it is yet undefined on input line 243.
+ [8]
+Underfull \hbox (badness 10000) in paragraph at lines 246--247
+
+ []
+
+<Images/screenshot001_2dGrid.png, id=411, 481.8pt x 271.0125pt>
 File: Images/screenshot001_2dGrid.png Graphic file (type png)
 <use Images/screenshot001_2dGrid.png>
-Package pdftex.def Info: Images/screenshot001_2dGrid.png  used on input line 22
+Package pdftex.def Info: Images/screenshot001_2dGrid.png  used on input line 25
 3.
 (pdftex.def)             Requested size: 345.0pt x 194.06606pt.
-<Images/screenshot001_2dGrid2.png, id=387, 481.8pt x 271.0125pt>
+<Images/screenshot001_2dGrid2.png, id=424, 481.8pt x 271.0125pt>
 File: Images/screenshot001_2dGrid2.png Graphic file (type png)
 <use Images/screenshot001_2dGrid2.png>
 Package pdftex.def Info: Images/screenshot001_2dGrid2.png  used on input line 2
-29.
+59.
 (pdftex.def)             Requested size: 345.0pt x 194.06606pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[8 <./Images/screenshot001_2dGrid.png (PNG copy)>]
-<Images/screenshot001_aregraph1.png, id=408, 481.8pt x 271.0125pt>
+[9 <./Images/screenshot001_2dGrid.png (PNG copy)>] [10 <./Images/screenshot001_
+2dGrid2.png (PNG copy)>]
+<Images/screenshot001_aregraph1.png, id=451, 481.8pt x 271.0125pt>
 File: Images/screenshot001_aregraph1.png Graphic file (type png)
 <use Images/screenshot001_aregraph1.png>
 Package pdftex.def Info: Images/screenshot001_aregraph1.png  used on input line
- 240.
+ 270.
 (pdftex.def)             Requested size: 345.0pt x 194.06606pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<Images/screenshot001_aregraph2.png, id=413, 481.8pt x 271.0125pt>
+<Images/screenshot001_aregraph2.png, id=456, 481.8pt x 271.0125pt>
 File: Images/screenshot001_aregraph2.png Graphic file (type png)
 <use Images/screenshot001_aregraph2.png>
 Package pdftex.def Info: Images/screenshot001_aregraph2.png  used on input line
- 247.
+ 277.
 (pdftex.def)             Requested size: 345.0pt x 194.06606pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[9 <./Images/screenshot001_2dGrid2.png (PNG copy)>] [10 <./Images/screenshot001
-_aregraph1.png (PNG copy)> <./Images/screenshot001_aregraph2.png (PNG copy)>]
-[11] [12] [13]
+[11 <./Images/screenshot001_aregraph1.png (PNG copy)>] [12 <./Images/screenshot
+001_aregraph2.png (PNG copy)>] [13] [14] [15]
 Chapter 4.
-[14
+[16
 
 ]
-<Images/open map.png, id=488, 715.92468pt x 423.08063pt>
+<Images/open map.png, id=534, 715.92468pt x 423.08063pt>
 File: Images/open map.png Graphic file (type png)
 <use Images/open map.png>
-Package pdftex.def Info: Images/open map.png  used on input line 371.
+Package pdftex.def Info: Images/open map.png  used on input line 402.
 (pdftex.def)             Requested size: 345.0pt x 203.88335pt.
- [15 <./Images/open map.png>]
-<Images/closemap.png, id=496, 716.6775pt x 424.58624pt>
+ [17 <./Images/open map.png>]
+<Images/closemap.png, id=542, 716.6775pt x 424.58624pt>
 File: Images/closemap.png Graphic file (type png)
 <use Images/closemap.png>
-Package pdftex.def Info: Images/closemap.png  used on input line 380.
+Package pdftex.def Info: Images/closemap.png  used on input line 411.
 (pdftex.def)             Requested size: 345.0pt x 204.39511pt.
- [16
+ [18
 
  <./Images/closemap.png>]
 Chapter 5.
-<Images/100 Games Shared vs Unshared Open Map.png, id=510, 628.3475pt x 581.171
+<Images/100 Games Shared vs Unshared Open Map.png, id=555, 628.3475pt x 581.171
 25pt>
 File: Images/100 Games Shared vs Unshared Open Map.png Graphic file (type png)
 <use Images/100 Games Shared vs Unshared Open Map.png>
 Package pdftex.def Info: Images/100 Games Shared vs Unshared Open Map.png  used
- on input line 395.
+ on input line 425.
 (pdftex.def)             Requested size: 310.4979pt x 287.17961pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[17
+[19
 
-
-] [18 <./Images/100 Games Shared vs Unshared Open Map.png>]
-<Images/100 Games Unshared vs Shared Open Map.png, id=523, 584.1825pt x 581.171
+] [20 <./Images/100 Games Shared vs Unshared Open Map.png>]
+<Images/100 Games Unshared vs Shared Open Map.png, id=568, 584.1825pt x 581.171
 25pt>
 File: Images/100 Games Unshared vs Shared Open Map.png Graphic file (type png)
 <use Images/100 Games Unshared vs Shared Open Map.png>
 Package pdftex.def Info: Images/100 Games Unshared vs Shared Open Map.png  used
- on input line 405.
+ on input line 435.
 (pdftex.def)             Requested size: 310.4979pt x 308.90608pt.
- [19
+ [21
 
  <./Images/100 Games Unshared vs Shared Open Map.png>]
-<Images/100 Games Shared vs Shared Open Map.png, id=532, 600.2425pt x 581.17125
+<Images/100 Games Shared vs Shared Open Map.png, id=578, 600.2425pt x 581.17125
 pt>
 File: Images/100 Games Shared vs Shared Open Map.png Graphic file (type png)
 <use Images/100 Games Shared vs Shared Open Map.png>
 Package pdftex.def Info: Images/100 Games Shared vs Shared Open Map.png  used o
-n input line 415.
+n input line 445.
 (pdftex.def)             Requested size: 310.4979pt x 300.64116pt.
- [20
+ [22
 
  <./Images/100 Games Shared vs Shared Open Map.png>]
-<Images/100 Games Unshared vs Unshared Open Map.png, id=541, 625.33624pt x 581.
+<Images/100 Games Unshared vs Unshared Open Map.png, id=587, 625.33624pt x 581.
 17125pt>
 File: Images/100 Games Unshared vs Unshared Open Map.png Graphic file (type png
 )
 <use Images/100 Games Unshared vs Unshared Open Map.png>
 Package pdftex.def Info: Images/100 Games Unshared vs Unshared Open Map.png  us
-ed on input line 425.
+ed on input line 455.
 (pdftex.def)             Requested size: 310.4979pt x 288.57188pt.
- [21
+ [23
 
  <./Images/100 Games Unshared vs Unshared Open Map.png>]
-<Images/100 Games Shared vs Unshared Close Map.png, id=550, 618.31pt x 581.1712
+<Images/100 Games Shared vs Unshared Close Map.png, id=596, 618.31pt x 581.1712
 5pt>
 File: Images/100 Games Shared vs Unshared Close Map.png Graphic file (type png)
 
 <use Images/100 Games Shared vs Unshared Close Map.png>
 Package pdftex.def Info: Images/100 Games Shared vs Unshared Close Map.png  use
-d on input line 436.
+d on input line 466.
 (pdftex.def)             Requested size: 310.4979pt x 291.85303pt.
 
-[22
+[24
 
  <./Images/100 Games Shared vs Unshared Close Map.png>]
-<Images/100 Games Unshared vs Shared Close Map.png, id=560, 559.08875pt x 581.1
+<Images/100 Games Unshared vs Shared Close Map.png, id=605, 559.08875pt x 581.1
 7125pt>
 File: Images/100 Games Unshared vs Shared Close Map.png Graphic file (type png)
 
 <use Images/100 Games Unshared vs Shared Close Map.png>
 Package pdftex.def Info: Images/100 Games Unshared vs Shared Close Map.png  use
-d on input line 446.
+d on input line 478.
 (pdftex.def)             Requested size: 310.4979pt x 322.77556pt.
- [23
+ [25
 
  <./Images/100 Games Unshared vs Shared Close Map.png>]
-<Images/100 Games Shared vs Shared Close Map.png, id=569, 610.28pt x 581.17125p
+<Images/100 Games Shared vs Shared Close Map.png, id=614, 610.28pt x 581.17125p
 t>
 File: Images/100 Games Shared vs Shared Close Map.png Graphic file (type png)
 <use Images/100 Games Shared vs Shared Close Map.png>
 Package pdftex.def Info: Images/100 Games Shared vs Shared Close Map.png  used 
-on input line 456.
+on input line 490.
 (pdftex.def)             Requested size: 310.4979pt x 295.7017pt.
- [24
+ [26
 
  <./Images/100 Games Shared vs Shared Close Map.png>]
-<Images/100 Games Unshared vs Unshared Close Map.png, id=578, 559.08875pt x 581
+<Images/100 Games Unshared vs Unshared Close Map.png, id=623, 559.08875pt x 581
 .17125pt>
 File: Images/100 Games Unshared vs Unshared Close Map.png Graphic file (type pn
 g)
 <use Images/100 Games Unshared vs Unshared Close Map.png>
 Package pdftex.def Info: Images/100 Games Unshared vs Unshared Close Map.png  u
-sed on input line 466.
+sed on input line 500.
 (pdftex.def)             Requested size: 310.4979pt x 322.77556pt.
- [25
+ [27
 
 
  <./Images/100 Games Unshared vs Unshared Close Map.png>]
 Chapter 6.
-[26
+[28
 
 ]
 Chapter 7.
-[27
+
+Underfull \hbox (badness 10000) in paragraph at lines 514--515
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 516--517
+
+ []
+
+Package acronym Info: Label `acro:GOAP' newly defined as it shall be overridden
+
+although it is yet undefined on input line 518.
+Package acronym Info: Label `acro:FSM' newly defined as it shall be overridden
+although it is yet undefined on input line 518.
+
+Underfull \hbox (badness 10000) in paragraph at lines 518--519
+
+ []
+
+[29
 
 ]
 Chapter 8.
-[28
+[30
 
 ] (template_Article.lof)
 \tf@lof=\write5
 \openout5 = `template_Article.lof'.
 
- [29
+ [31
 
 ] (template_Article.lot)
 \tf@lot=\write6
 \openout6 = `template_Article.lot'.
 
  (template_Article.bbl
-[30
+[32
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 19--23
@@ -661,20 +719,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--23
 \OT1/cmtt/m/n/10 net / tutorials / programming / artificial-[]intelligence /
  []
 
-) [31
+) [33
 
 ] (template_Article.aux)
 Package rerunfilecheck Info: File `template_Article.out' has not changed.
-(rerunfilecheck)             Checksum: 4555F1F87EC2B58409E309FAE2A1DC91;2867.
+(rerunfilecheck)             Checksum: B8D3CFC64361C4F2ECAB7468F6391DA8;3003.
  ) 
 Here is how much of TeX's memory you used:
- 7845 strings out of 479697
- 121017 string characters out of 2867132
- 440006 words of memory out of 3000000
- 24641 multiletter control sequences out of 15000+200000
+ 7865 strings out of 479697
+ 121264 string characters out of 2867132
+ 438342 words of memory out of 3000000
+ 24655 multiletter control sequences out of 15000+200000
  409308 words of font info for 49 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 66i,8n,72p,897b,461s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 66i,8n,72p,970b,443s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\fredd\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1000.pk><C:/Users/fredd/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmbx10.pfb><C:/Users/fredd/AppData/Local/Programs/MiKTeX/fonts/type1/publ
@@ -691,9 +749,9 @@ C:/Users/fredd/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr
 msfonts/cm/cmsy10.pfb><C:/Users/fredd/AppData/Local/Programs/MiKTeX/fonts/type1
 /public/amsfonts/cm/cmti10.pfb><C:/Users/fredd/AppData/Local/Programs/MiKTeX/fo
 nts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on template_Article.pdf (34 pages, 4012672 bytes).
+Output written on template_Article.pdf (37 pages, 4032434 bytes).
 PDF statistics:
- 748 PDF objects out of 1000 (max. 8388607)
- 131 named destinations out of 1000 (max. 500000)
- 423 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 832 PDF objects out of 1000 (max. 8388607)
+ 137 named destinations out of 1000 (max. 500000)
+ 439 words of extra memory for PDF output out of 10000 (max. 10000000)
 
